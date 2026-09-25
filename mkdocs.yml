@@ -1,0 +1,19 @@
+site_name: RLD+ Entity Documentation
+site_url: https://averagefree2play.github.io/rldplus_entity_docs/
+nav:
+  - Home: index.md
+  - Getting Started: getting_started.md
+  - API Reference:
+      - Entity: api_reference/overview.md
+      - EntityData: api_reference/endpoints.md
+      - Chaser: api_reference/authentication.md
+      - ChaserData: api_reference/authentication.md
+      - Checker: api_reference/authentication.md
+      - CheckerData: api_reference/authentication.md
+      - Summoner: api_reference/authentication.md
+      - SummonerData: api_reference/authentication.md
+  - Features: features.md
+theme: 
+  name: readthedocs
+markdown_extensions:
+  - admonition
