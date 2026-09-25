@@ -12,7 +12,6 @@ nav:
       - CheckerData: api_reference/authentication.md
       - Summoner: api_reference/authentication.md
       - SummonerData: api_reference/authentication.md
-  - Third Parties: third_parties.md
 theme:
   name: material
   favicon: images/favicon.ico
@@ -27,12 +26,18 @@ theme:
     - search.share
     - header.autohide
     - content.code.annotate
-  palette: 
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
     - scheme: default
+      media: "(prefers-color-scheme: light)"
       toggle:
         icon: material/brightness-7 
         name: Switch to dark mode
     - scheme: slate
+      media: "(prefers-color-scheme: dark)"
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
