@@ -1,8 +1,8 @@
 site_name: RLD+ Entity Documentation
 site_url: https://averagefree2play.github.io/rldplus_entity_docs/
 nav:
-  - Home: index.md
-  - Getting Started: getting_started.md
+  - Introduction: index.md
+  - Features: features.md
   - API Reference:
       - Entity: api_reference/overview.md
       - EntityData: api_reference/endpoints.md
@@ -12,8 +12,52 @@ nav:
       - CheckerData: api_reference/authentication.md
       - Summoner: api_reference/authentication.md
       - SummonerData: api_reference/authentication.md
-  - Features: features.md
-theme: 
-  name: readthedocs
+  - Third Parties: third_parties.md
+theme:
+  name: material
+  favicon: images/favicon.ico
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.path
+    - navigation.top
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - search.share
+    - header.autohide
+    - content.code.annotate
+  palette: 
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+plugins:
+  - search
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/AverageFree2Play/RLDPlus-Docs
+      name: GitHub
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/GxcZ6Tx2Hm
+      name: Discord
 markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.details
   - admonition
+  - toc:
+      permalink: true
+repo_url: https://github.com/AverageFree2Play/RLDPlus-Docs
+repo_name: AverageFree2Play/RLDPlus-Docs
