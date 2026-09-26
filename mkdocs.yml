@@ -4,14 +4,14 @@ nav:
   - Introduction: index.md
   - Features: features.md
   - API Reference:
-      - Entity: api_reference/overview.md
-      - EntityData: api_reference/endpoints.md
-      - Chaser: api_reference/authentication.md
-      - ChaserData: api_reference/authentication.md
-      - Checker: api_reference/authentication.md
-      - CheckerData: api_reference/authentication.md
-      - Summoner: api_reference/authentication.md
-      - SummonerData: api_reference/authentication.md
+      - Entity: api_entity.md
+      - EntityData: api_entity_data.md
+      - Chaser: api_chaser.md
+      - ChaserData: api_chaser_data.md
+      - Checker: api_checker.md
+      - CheckerData: api_checker_data.md
+      - Summoner: api_summoner.md
+      - SummonerData: api_summoner_data.md
 theme:
   name: material
   favicon: images/favicon.ico
