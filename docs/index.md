@@ -56,6 +56,6 @@ myEntity.OnRoomReached:Connect(function(roomNum: number)
 end)
 ```
 
-To find out more about events, check the [API Reference](./api_reference/overview.md#Events) for events.
+To find out more about events, check the [API Reference](api_entity.md) for events.
 
 ---
