@@ -52,7 +52,7 @@ extra:
 extra_css:
   - css/extra_style.css
 extra_javascript:
-  - javascripts/tags.js
+  - js/tags.js
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
