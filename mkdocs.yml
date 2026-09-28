@@ -27,10 +27,6 @@ theme:
     - header.autohide
     - content.code.annotate
   palette:
-    - media: "(prefers-color-scheme)"
-      toggle:
-        icon: material/brightness-auto
-        name: Switch to light mode
     - scheme: default
       media: "(prefers-color-scheme: light)"
       toggle:
@@ -43,6 +39,7 @@ theme:
         name: Switch to light mode
 plugins:
   - search
+  - tags
 extra:
   generator: false
   social:
@@ -54,6 +51,8 @@ extra:
       name: Discord
 extra_css:
   - css/extra_style.css
+extra_javascript:
+  - javascripts/tags.js
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -64,6 +63,8 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.details
   - admonition
+  - attr_list
+  - md_in_html
   - toc:
       permalink: true
 repo_url: https://github.com/AverageFree2Play/RLDPlus-Docs

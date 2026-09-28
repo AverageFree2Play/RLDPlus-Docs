@@ -26,11 +26,14 @@
 }
 
 /* Type link styling with underline */
-.param-type {
+.param-header .param-type {
   color: #ffffff;
   text-decoration: underline;
   text-underline-offset: 3px;
   font-weight: 500;
+}
+.param-header .param-type:hover {
+  color: #ffffff;
 }
 
 /* Description text */
@@ -38,4 +41,25 @@
   color: #a0a0a0;
   font-size: 0.7rem;
   line-height: 1.4;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 4px; /* Adjust radius for rounded corners */
+  background-color: var(--md-code-bg-color, #22272e);
+  color: var(--md-typeset-color, #adbac7);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  margin-right: 6px;
+  line-height: 1.4;
+  vertical-align: middle;
+}
+
+/* Optional light/dark mode override if needed */
+[data-md-color-scheme="slate"] .badge {
+  background-color: #22272e;
+  color: #adbac7;
+  border-color: #373e47;
 }
