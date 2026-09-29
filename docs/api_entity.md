@@ -547,3 +547,46 @@ Entity.EntityAdded (entity: Entity) : Signal
     <div class="param-desc">The entity that was removed.</div>
   </div>
 </div>
+
+---
+## Callbacks
+#### OnSpawn
+Called when the entity is about to spawn in.
+```lua
+Entity.OnSpawn (
+  self : Entity
+) : ()
+```
+**Parameters**
+<div class="param-box">
+  <div class="param-row">
+    <div class="param-header">
+      entity : <a href="#api-reference" class="param-type">Entity</a>
+    </div>
+    <div class="param-desc">The entity that is about to spawn.</div>
+  </div>
+</div>
+
+Use this to perform starting actions to the entity. Such as playing sounds or do a certain thing...
+!!! tip
+    You can add [`task.wait`](https://create.roblox.com/docs/en-us/reference/engine/libraries/task#wait) or any other script yielding methods to pause the entity before it starts it's behaviour.
+
+---
+#### OnFinished
+Called when the entity is about to finish.
+```lua
+Entity.OnFinished (
+  self : Entity
+) : ()
+```
+**Parameters**
+<div class="param-box">
+  <div class="param-row">
+    <div class="param-header">
+      entity : <a href="#api-reference" class="param-type">Entity</a>
+    </div>
+    <div class="param-desc">The entity that is about to spawn.</div>
+  </div>
+</div>
+
+Use this to perform actions before the entity despawns.
