@@ -12,6 +12,7 @@ nav:
       - CheckerData: api_checker_data.md
       - Summoner: api_summoner.md
       - SummonerData: api_summoner_data.md
+      - SpeedData: speed_data.md
   - Enums: enums.md
 theme:
   name: material
@@ -42,6 +43,8 @@ theme:
 plugins:
   - search
   - tags
+  - typeset:
+      enabled: true
 extra:
   generator: false
   social:
@@ -69,9 +72,6 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.details
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - admonition
   - attr_list
   - md_in_html
@@ -79,5 +79,8 @@ markdown_extensions:
   - toc:
       permalink: true
       permalink_title: "Anchor link to this section for reference"
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 repo_url: https://github.com/AverageFree2Play/RLDPlus-Docs
 repo_name: AverageFree2Play/RLDPlus-Docs

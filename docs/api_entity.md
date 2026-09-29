@@ -5,12 +5,25 @@ title: API
 [EntityData]: ../api_entity_data.md
 [Vector3]: https://create.roblox.com/docs/en-us/reference/engine/datatypes/Vector3
 
-# API Reference
+# Entity
+The base class for every single entity.
+
+---
+## Summary
+### Constructors
+<div class="param-box">
+  <div class="param-row">
+    <div class="param-header"><a href="#new">new</a>(entityModel: Model,entityData: EntityData)</div>
+  </div>
+</div>
+### Properties
+### Methods
+### Events
+### Callbacks
 
 ## Constructor
 
 #### new
-
 {static}
 
 Constructs an entity with an <code>EntityModel</code> and a valid <code>EntityData</code> setting.
@@ -21,16 +34,16 @@ Entity.new(entityModel: Model,entityData: EntityData)
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      entityModel : <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/Model" class="param-type">Model</a>
+      entityModel : <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/Model">Model</a>
     </div>
     <div class="param-desc">
-      The model that the entity will use. It must contain at least one <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/BasePart" class="param-type">BasePart</a>.
+      The model that the entity will use. It must contain at least one <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/BasePart">BasePart</a>.
     </div>
   </div>
 
   <div class="param-row">
     <div class="param-header">
-      entityData : <a href="#" class="param-type">EntityData</a>
+      entityData : <a href="#">EntityData</a>
     </div>
     <div class="param-desc">
       The EntityData setting the entity will use.
@@ -40,7 +53,7 @@ Entity.new(entityModel: Model,entityData: EntityData)
 ---
 
 ## Properties
-#### isActive
+#### :material-cube-outline:{.property} isActive
 {read-only}
 
 Determines whether the entity is currently active or not.
@@ -49,7 +62,7 @@ Entity.isActive : boolean
 ```
 This property will be `true` when the [`:Start`](#start) method is called.
 ---
-#### isDestroyed
+#### :material-cube-outline:{.property} isDestroyed
 {read-only}
 
 Determines whether the entity is destroyed or not.
@@ -58,7 +71,7 @@ Entity.isDestroyed : boolean
 ```
 This property will be `true` when calling [`:Destroy`](#destroy).
 ---
-#### Type
+#### :material-cube-outline:{.property} Type
 {read-only}
 
 The specified [`Enum.EntityType`](enums.md/#entity-type) for the entity.
@@ -67,7 +80,7 @@ Entity.Type : string
 ```
 This property is automatically set from the [EntityData].
 ---
-#### Model
+#### :material-cube-outline:{.property} Model
 {read-only}
 
 The model that the entity is using.
@@ -76,7 +89,7 @@ Entity.Model : Model
 ```
 This property is automatically set from the [constructor](#constructor).
 ---
-#### Root
+#### :material-cube-outline:{.property} Root
 {read-only}
 
 The entity's root part.
@@ -85,7 +98,7 @@ Entity.Root : BasePart
 ```
 This property is automatically set from the entity's Model.
 ---
-#### Settings
+#### :material-cube-outline:{.property} Settings
 {read-only}
 
 The entity's [EntityData].
@@ -94,16 +107,16 @@ Entity.Settings : EntityData
 ```
 This property is automatically set from the [constructor](#constructor).
 ---
-#### Speed
+#### :material-cube-outline:{.property} Speed
 {read-only}
 
 The entity's speed data.
 ```lua
 Entity.Speed : number | SpeedData
 ```
-This property can be either a number or a dictionary containing the entity's speed data.
+This property can be either a number or a special [`SpeedData`](./speed_data.md) dictionary.
 ---
-#### State
+#### :material-cube-outline:{.property} State
 Determines the entity's current state.
 ```lua
 Entity.State : string
@@ -112,7 +125,7 @@ This property can be modified directly or using `Entity:ChangeState()`.
 !!! warning
     Changing the entity's state may cause unwanted behavior.
 ---
-#### Direction
+#### :material-cube-outline:{.property} Direction
 {read-only}
 
 The direction the entity is currently moving.
@@ -122,7 +135,7 @@ Entity.Direction : string
 !!! info
     There are 2 valid directions: "Forward" and "Backward"
 ---
-#### CurrentRoom
+#### :material-cube-outline:{.property} CurrentRoom
 {read-only}
 
 The current room the entity is in.
@@ -132,7 +145,7 @@ Entity.CurrentRoom : number
 This is a dynamic property. Meaning it will change overtime.
 ---
 ## Methods
-#### GetPosition
+#### :material-cube-send:{.function} GetPosition
 Returns the entity's position in [Vector3]
 ```lua
 Entity:GetPosition() : Vector3
@@ -141,7 +154,7 @@ Entity:GetPosition() : Vector3
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      <a href="https://create.roblox.com/docs/en-us/reference/engine/datatypes/Vector3" class="param-type">Vector3</a>
+      <a href="https://create.roblox.com/docs/en-us/reference/engine/datatypes/Vector3">Vector3</a>
     </div>
     <div class="param-desc">
       The entity's position.
@@ -150,7 +163,7 @@ Entity:GetPosition() : Vector3
 </div>
 ---
 
-#### GetTarget
+#### :material-cube-send:{.function} GetTarget
 Returns the entity's MoveTo target. The MoveTo target can be set using [`Entity:MoveTo()`](#moveto)
 ```lua
 Entity:GetTarget() : Vector3?
@@ -159,7 +172,7 @@ Entity:GetTarget() : Vector3?
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      <a href="https://create.roblox.com/docs/en-us/reference/engine/datatypes/Vector3" class="param-type">Vector3</a>?
+      <a href="https://create.roblox.com/docs/en-us/reference/engine/datatypes/Vector3">Vector3</a>?
     </div>
     <div class="param-desc"> The entity's MoveTo target. </div>
   </div>
@@ -168,7 +181,7 @@ Entity:GetTarget() : Vector3?
     This method can return nil if there is no specified MoveTo target.
 ---
 
-#### CanSeeTarget
+#### :material-cube-send:{.function} CanSeeTarget
 Returns true if the entity can detect a player in their hitbox radius or not.
 ```lua
 Entity:CanSeeTarget(target: Model|Player) : boolean
@@ -177,7 +190,7 @@ Entity:CanSeeTarget(target: Model|Player) : boolean
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      target : <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/Model" class="param-type">Model</a> | <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/Player" class="param-type">Player</a>
+      target : <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/Model">Model</a> | <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/Player">Player</a>
     </div>
     <div class="param-desc">The target player to check.</div>
   </div>
@@ -187,14 +200,14 @@ Entity:CanSeeTarget(target: Model|Player) : boolean
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      <a href="https://create.roblox.com/docs/en-us/luau/booleans" class="param-type">boolean</a>
+      <a href="https://create.roblox.com/docs/en-us/luau/booleans">boolean</a>
     </div>
     <div class="param-desc">Describes whether the entity can detect the target player or not.</div>
   </div>
 </div>
 ---
 
-#### IsPlayerHiding
+#### :material-cube-send:{.function} IsPlayerHiding
 Returns true if the player is hiding in one of the valid hiding spots.
 ```lua
 Entity:IsPlayerHiding(player: Player) : boolean
@@ -203,7 +216,7 @@ Entity:IsPlayerHiding(player: Player) : boolean
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      player : <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/Player" class="param-type">Player</a>
+      player : <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/Player">Player</a>
     </div>
     <div class="param-desc">The target player to check.</div>
   </div>
@@ -213,7 +226,7 @@ Entity:IsPlayerHiding(player: Player) : boolean
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      <a href="https://create.roblox.com/docs/en-us/luau/booleans" class="param-type">boolean</a>
+      <a href="https://create.roblox.com/docs/en-us/luau/booleans">boolean</a>
     </div>
     <div class="param-desc">Describes whether the player is currently hiding or not.</div>
   </div>
@@ -222,7 +235,7 @@ Entity:IsPlayerHiding(player: Player) : boolean
     If the player is hiding in one of the blacklisted spots. The method will return false.
 ---
 
-#### ChangeState
+#### :material-cube-send:{.function} ChangeState
 
 Force set the entity's current state.
 ```lua
@@ -232,7 +245,7 @@ Entity:ChangeState(state: string) : ()
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      state : <a href="https://create.roblox.com/docs/en-us/luau/strings" class="param-type">string</a>
+      state : <a href="https://create.roblox.com/docs/en-us/luau/strings">string</a>
     </div>
     <div class="param-desc">The state to set to the current state of entity.</div>
   </div>
@@ -241,7 +254,7 @@ Entity:ChangeState(state: string) : ()
 !!! danger
     This method can cause some of the entity's behavior to cancel or trigger. DO NOT MESS WITH THIS UNLESS YOU KNOW WHAT YOU'RE DOING.
 ---
-#### MoveTo
+#### :material-cube-send:{.function} MoveTo
 Make the entity move to a location.
 ```lua
 Entity:MoveTo(location: Vector3) : ()
@@ -250,14 +263,14 @@ Entity:MoveTo(location: Vector3) : ()
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      location : <a href="https://create.roblox.com/docs/reference/engine/datatypes/Vector3" class="param-type">Vector3</a>
+      location : <a href="https://create.roblox.com/docs/reference/engine/datatypes/Vector3">Vector3</a>
     </div>
     <div class="param-desc">The location to make the entity move to.</div>
   </div>
 </div>
 
 ---
-#### AddToJanitor
+#### :material-cube-send:{.function} AddToJanitor
 Passes the given object to the entity's janitor to be destroyed/disconnected on entity destruction. If a function is passed, it will be called when the entity is destroyed.
 ```lua
 Entity:AddToJanitor(object: T,methodName?: boolean|string,index?) : T
@@ -266,13 +279,13 @@ Entity:AddToJanitor(object: T,methodName?: boolean|string,index?) : T
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      object : <a href="https://create.roblox.com/docs/reference/engine/datatypes/Vector3" class="param-type">Variant</a>
+      object : <a href="https://create.roblox.com/docs/reference/engine/datatypes/Vector3">Variant</a>
     </div>
     <div class="param-desc">The object you want to clean up.</div>
   </div>
   <div class="param-row">
     <div class="param-header">
-      methodName? : <a href="https://create.roblox.com/docs/en-us/luau/booleans" class="param-type">boolean</a> | <a href="https://create.roblox.com/docs/en-us/luau/strings" class="param-type">string</a>
+      methodName? : <a href="https://create.roblox.com/docs/en-us/luau/booleans">boolean</a> | <a href="https://create.roblox.com/docs/en-us/luau/strings">string</a>
     </div>
     <div class="param-desc">The name of the method that will be used to clean up. If not passed, it will first check if the object's type exists in TypeDefaults, and if that doesn't exist, it assumes Destroy.</div>
   </div>
@@ -288,14 +301,14 @@ Entity:AddToJanitor(object: T,methodName?: boolean|string,index?) : T
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      <a href="https://create.roblox.com/docs/en-us/luau/booleans" class="param-type">Variant</a>
+      <a href="https://create.roblox.com/docs/en-us/luau/booleans">Variant</a>
     </div>
     <div class="param-desc">The object that was passed as the first argument.</div>
   </div>
 </div>
 
 ---
-#### MoveToRoom
+#### :material-cube-send:{.function} MoveToRoom
 {yields}
 
 Make the entity move to a room number.
@@ -306,21 +319,21 @@ Entity:MoveToRoom(roomNum: number) : ()
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      roomNum : <a href="https://create.roblox.com/docs/en-us/luau/numbers" class="param-type">number</a>
+      roomNum : <a href="https://create.roblox.com/docs/en-us/luau/numbers">number</a>
     </div>
     <div class="param-desc">The room number to make the entity move to.</div>
   </div>
 </div>
 
 ---
-#### Destroy
+#### :material-cube-send:{.function} Destroy
 
 Destroys the entity and disconnects all connections.
 ```lua
 Entity:Destroy() : ()
 ```
 ---
-#### SetPos
+#### :material-cube-send:{.function} SetPos
 
 Set the entity's model to a position and an optional position for the entity to look at.
 ```lua
@@ -330,13 +343,13 @@ Entity:SetPos(pos: Vector3, lookAt: Vector3?) : ()
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      pos : <a href="https://create.roblox.com/docs/reference/engine/datatypes/Vector3" class="param-type">Vector3</a>
+      pos : <a href="https://create.roblox.com/docs/reference/engine/datatypes/Vector3">Vector3</a>
     </div>
     <div class="param-desc">The world-space position to pivot the entity's model.</div>
   </div>
   <div class="param-row">
     <div class="param-header">
-      lookAt : <a href="https://create.roblox.com/docs/reference/engine/datatypes/Vector3" class="param-type">Vector3</a>
+      lookAt : <a href="https://create.roblox.com/docs/reference/engine/datatypes/Vector3">Vector3</a>
     </div>
     <div class="param-desc">The world-space point the entity should face toward.</div>
   </div>
@@ -344,7 +357,7 @@ Entity:SetPos(pos: Vector3, lookAt: Vector3?) : ()
 Equivalent to [`CFrame.new(pos: Vector3,lookAt: Vector3)`](https://create.roblox.com/docs/en-us/reference/engine/datatypes/CFrame#new-pos-lookAt)
 
 ---
-#### SetSetting
+#### :material-cube-send:{.function} SetSetting
 {recommended}
 
 Set a setting from the `EntityData` the entity is using to a different value. This is useful If you want to change a certain entity's setting during runtime.
@@ -355,20 +368,20 @@ Entity:SetSetting(setting: string,value: any) : ()
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      setting : <a href="https://create.roblox.com/docs/en-us/luau/strings" class="param-type">string</a>
+      setting : <a href="https://create.roblox.com/docs/en-us/luau/strings">string</a>
     </div>
     <div class="param-desc">The setting name to change.</div>
   </div>
   <div class="param-row">
     <div class="param-header">
-      value : <a href="#" class="param-type">Variant</a>
+      value : <a href="#">Variant</a>
     </div>
     <div class="param-desc">The value to change to.</div>
   </div>
 </div>
 
 ---
-#### Start
+#### :material-cube-send:{.function} Start
 {recommended}
 
 Start the entity.
@@ -381,7 +394,7 @@ Entity:Start() : ()
 ---
 ## Events
 
-#### OnStart
+#### :material-lightning-bolt:{.event} OnStart
 {deprecated}
 
 Fires when the entity has started via [`:Start()`](#start)
@@ -392,14 +405,14 @@ Entity.OnStart (): Signal
     I don't know why I added this. Since you can already code your own entity behaviour without needing this event.
     **Avery 28/9/2026**
 ---
-#### OnEnded
+#### :material-lightning-bolt:{.event} OnEnded
 
 Fires when the entity has completed it's event sequence.
 ```lua
 Entity.OnEnded (): Signal
 ```
 ---
-#### OnHit
+#### :material-lightning-bolt:{.event} OnHit
 
 Fires when the entity *successfully* damages a player.
 ```lua
@@ -409,14 +422,14 @@ Entity.OnHit (player: Player): Signal
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      player : <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/Player" class="param-type">Player</a>
+      player : <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/Player">Player</a>
     </div>
     <div class="param-desc">The player that was damaged.</div>
   </div>
 </div>
 
 ---
-#### OnKill
+#### :material-lightning-bolt:{.event} OnKill
 
 Fires when the entity *successfully* kills a player.
 ```lua
@@ -426,14 +439,14 @@ Entity.OnKill (player: Player): Signal
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      player : <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/Player" class="param-type">Player</a>
+      player : <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/Player">Player</a>
     </div>
     <div class="param-desc">The player that was killed.</div>
   </div>
 </div>
 ---
 
-#### OnRoomReached
+#### :material-lightning-bolt:{.event} OnRoomReached
 Fires when the entity enters a room.
 ```lua
 Entity.OnRoomReached (roomNum: number): Signal
@@ -442,14 +455,14 @@ Entity.OnRoomReached (roomNum: number): Signal
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      roomNum : <a href="https://create.roblox.com/docs/en-us/luau/numbers" class="param-type">number</a>
+      roomNum : <a href="https://create.roblox.com/docs/en-us/luau/numbers">number</a>
     </div>
     <div class="param-desc">The room number that the entity entered.</div>
   </div>
 </div>
 ---
 
-#### OnUpdate
+#### :material-lightning-bolt:{.event} OnUpdate
 Equivalent to [`RunSerivce.PostSimulation`](https://create.roblox.com/docs/en-us/reference/engine/classes/RunService#PostSimulation) but fires after all entity core actions are called.
 ```lua
 Entity.OnUpdate (deltaTime: number): Signal
@@ -458,14 +471,14 @@ Entity.OnUpdate (deltaTime: number): Signal
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      deltaTime : <a href="https://create.roblox.com/docs/en-us/luau/numbers" class="param-type">number</a>
+      deltaTime : <a href="https://create.roblox.com/docs/en-us/luau/numbers">number</a>
     </div>
     <div class="param-desc">The time (in seconds) that the current frame has stepped the physics simulation, not accounting for physics throttling.</div>
   </div>
 </div>
 ---
 
-#### OnRebound
+#### :material-lightning-bolt:{.event} OnRebound
 Fires whenever the entity rebounds (reached the last or starting room).
 ```lua
 Entity.OnRebound (rebounds: number): Signal
@@ -474,14 +487,14 @@ Entity.OnRebound (rebounds: number): Signal
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      rebounds : <a href="https://create.roblox.com/docs/en-us/luau/numbers" class="param-type">number</a>
+      rebounds : <a href="https://create.roblox.com/docs/en-us/luau/numbers">number</a>
     </div>
     <div class="param-desc">The amount of times the entity rebounded.</div>
   </div>
 </div>
 ---
 
-#### MoveToFinished
+#### :material-lightning-bolt:{.event} MoveToFinished
 Fires whenever the entity has finished it's [`MoveTo`](#moveto) action.
 ```lua
 Entity.MoveToFinished (reached: boolean): Signal
@@ -490,14 +503,14 @@ Entity.MoveToFinished (reached: boolean): Signal
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      reached : <a href="https://create.roblox.com/docs/en-us/luau/booleans" class="param-type">boolean</a>
+      reached : <a href="https://create.roblox.com/docs/en-us/luau/booleans">boolean</a>
     </div>
     <div class="param-desc">Describes whether or not the entity has reached the move to location or got interrupted.</div>
   </div>
 </div>
 ---
 
-#### StateChanged
+#### :material-lightning-bolt:{.event} StateChanged
 Fires whenever the entity's state changes.
 ```lua
 Entity.StateChanged (state: string): Signal
@@ -506,14 +519,14 @@ Entity.StateChanged (state: string): Signal
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      state : <a href="https://create.roblox.com/docs/en-us/luau/strings" class="param-type">string</a>
+      state : <a href="https://create.roblox.com/docs/en-us/luau/strings">string</a>
     </div>
     <div class="param-desc">The current state of the entity.</div>
   </div>
 </div>
 ---
 
-#### EntityAdded
+#### :material-lightning-bolt:{.event} EntityAdded
 {static}
 
 Fires when an entity is added via the [constructor](#constructor).
@@ -524,14 +537,14 @@ Entity.EntityAdded (entity: Entity) : Signal
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      entity : <a href="#api-reference" class="param-type">Entity</a>
+      entity : <a href="#api-reference">Entity</a>
     </div>
     <div class="param-desc">The entity that was added.</div>
   </div>
 </div>
 
 ---
-#### EntityRemoved
+#### :material-lightning-bolt:{.event} EntityRemoved
 {static}
 
 Fires when an entity is removed via the [:Destroy()](#destroy) method.
@@ -542,7 +555,7 @@ Entity.EntityAdded (entity: Entity) : Signal
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      entity : <a href="#api-reference" class="param-type">Entity</a>
+      entity : <a href="#api-reference">Entity</a>
     </div>
     <div class="param-desc">The entity that was removed.</div>
   </div>
@@ -550,7 +563,7 @@ Entity.EntityAdded (entity: Entity) : Signal
 
 ---
 ## Callbacks
-#### OnSpawn
+#### :material-cube-send:{.function} OnSpawn
 Called when the entity is about to spawn in.
 ```lua
 Entity.OnSpawn (
@@ -561,7 +574,7 @@ Entity.OnSpawn (
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      entity : <a href="#api-reference" class="param-type">Entity</a>
+      entity : <a href="#api-reference">Entity</a>
     </div>
     <div class="param-desc">The entity that is about to spawn.</div>
   </div>
@@ -572,7 +585,7 @@ Use this to perform starting actions to the entity. Such as playing sounds or do
     You can add [`task.wait`](https://create.roblox.com/docs/en-us/reference/engine/libraries/task#wait) or any other script yielding methods to pause the entity before it starts it's behaviour.
 
 ---
-#### OnFinished
+#### :material-cube-send:{.function} OnFinished
 Called when the entity is about to finish.
 ```lua
 Entity.OnFinished (
@@ -583,7 +596,7 @@ Entity.OnFinished (
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      entity : <a href="#api-reference" class="param-type">Entity</a>
+      entity : <a href="#api-reference">Entity</a>
     </div>
     <div class="param-desc">The entity that is about to spawn.</div>
   </div>
