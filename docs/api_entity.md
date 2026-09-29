@@ -40,16 +40,32 @@ Entity.new(entityModel: Model,entityData: EntityData)
 ---
 
 ## Properties
+#### isActive
+{read-only}
+
+Determines whether the entity is currently active or not.
+```lua
+Entity.isActive : boolean
+```
+This property will be `true` when the [`:Start`](#start) method is called.
+---
+#### isDestroyed
+{read-only}
+
+Determines whether the entity is destroyed or not.
+```lua
+Entity.isDestroyed : boolean
+```
+This property will be `true` when calling [`:Destroy`](#destroy).
+---
 #### Type
 {read-only}
 
-The specified type for the entity.
+The specified [`Enum.EntityType`](enums.md/#entity-type) for the entity.
 ```lua
 Entity.Type : string
 ```
 This property is automatically set from the [EntityData].
-!!! info
-    There are 4 valid entity types: "Generic", "Checker", "Chaser", "Summoner"
 ---
 #### Model
 {read-only}
@@ -77,6 +93,15 @@ The entity's [EntityData].
 Entity.Settings : EntityData
 ```
 This property is automatically set from the [constructor](#constructor).
+---
+#### Speed
+{read-only}
+
+The entity's speed data.
+```lua
+Entity.Speed : number | SpeedData
+```
+This property can be either a number or a dictionary containing the entity's speed data.
 ---
 #### State
 Determines the entity's current state.
@@ -228,6 +253,44 @@ Entity:MoveTo(location: Vector3) : ()
       location : <a href="https://create.roblox.com/docs/reference/engine/datatypes/Vector3" class="param-type">Vector3</a>
     </div>
     <div class="param-desc">The location to make the entity move to.</div>
+  </div>
+</div>
+
+---
+#### AddToJanitor
+Passes the given object to the entity's janitor to be destroyed/disconnected on entity destruction. If a function is passed, it will be called when the entity is destroyed.
+```lua
+Entity:AddToJanitor(object: T,methodName?: boolean|string,index?) : T
+```
+**Parameters**
+<div class="param-box">
+  <div class="param-row">
+    <div class="param-header">
+      object : <a href="https://create.roblox.com/docs/reference/engine/datatypes/Vector3" class="param-type">Variant</a>
+    </div>
+    <div class="param-desc">The object you want to clean up.</div>
+  </div>
+  <div class="param-row">
+    <div class="param-header">
+      methodName? : <a href="https://create.roblox.com/docs/en-us/luau/booleans" class="param-type">boolean</a> | <a href="https://create.roblox.com/docs/en-us/luau/strings" class="param-type">string</a>
+    </div>
+    <div class="param-desc">The name of the method that will be used to clean up. If not passed, it will first check if the object's type exists in TypeDefaults, and if that doesn't exist, it assumes Destroy.</div>
+  </div>
+  <div class="param-row">
+    <div class="param-header">
+      index? : unknown
+    </div>
+    <div class="param-desc">The index that can be used to clean up the object manually.</div>
+  </div>
+</div>
+
+**Returns**
+<div class="param-box">
+  <div class="param-row">
+    <div class="param-header">
+      <a href="https://create.roblox.com/docs/en-us/luau/booleans" class="param-type">Variant</a>
+    </div>
+    <div class="param-desc">The object that was passed as the first argument.</div>
   </div>
 </div>
 
