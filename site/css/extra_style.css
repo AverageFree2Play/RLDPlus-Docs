@@ -22,18 +22,53 @@
   font-family: monospace;
   font-size: 0.75rem;
   color: #e6e6e6;
-  margin-bottom: 4px;
 }
 
 /* Type link styling with underline */
-.param-header .param-type {
+.param-header a {
   color: #ffffff;
   text-decoration: underline;
   text-underline-offset: 3px;
   font-weight: 500;
 }
-.param-header .param-type:hover {
+.param-header a:hover {
   color: #ffffff;
+}
+
+.icon-cube::before {
+  content: "";
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: -0.15em;
+  background-color: #1AC8FF;
+  /* Use the exact SVG mask for the cube icon */
+  -webkit-mask: url('https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/material/templates/.icons/material/cube-outline.svg') no-repeat center / contain;
+  mask: url('https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/material/templates/.icons/material/cube-outline.svg') no-repeat center / contain;
+}
+
+.icon-cube-send::before{
+  content: "";
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  margin-right: 0.6em;
+  vertical-align: -0.15em;
+  background-color: #d466e5;
+  -webkit-mask: url('https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/material/templates/.icons/material/cube-send.svg') no-repeat center / contain;
+  mask: url('https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/material/templates/.icons/material/cube-send.svg') no-repeat center / contain;
+}
+
+.icon-lightning::before{
+  content: "";
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  margin-right: 0.6em;
+  vertical-align: -0.15em;
+  background-color: #f2ba2a;
+  -webkit-mask: url('https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/material/templates/.icons/material/lightning-bolt.svg') no-repeat center / contain;
+  mask: url('https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/material/templates/.icons/material/lightning-bolt.svg') no-repeat center / contain;
 }
 
 /* Description text */
@@ -41,6 +76,7 @@
   color: #a0a0a0;
   font-size: 0.7rem;
   line-height: 1.4;
+  margin-top: 4px;
 }
 
 .badge {
@@ -55,6 +91,18 @@
   margin-right: 6px;
   line-height: 1.4;
   vertical-align: middle;
+}
+
+.property{
+  color: #1ac8ff;
+}
+
+.function{
+  color: #d466e5;
+}
+
+.event{
+  color: #f2ba2a;
 }
 
 /* Optional light/dark mode override if needed */
