@@ -26,6 +26,7 @@ theme:
     - search.share
     - toc.follow
     - header.autohide
+    - content.tooltips
     - content.code.annotate
     - content.code.copy
     - content.code.select
@@ -73,6 +74,7 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.details
   - admonition
+  - abbr
   - attr_list
   - md_in_html
   - tables

@@ -46,8 +46,7 @@ EntityData = {
     ProhibitedSpots = {"Table","your_hiding_spot_id"} -- Add more excluded hiding spots here
 }
 ```
-!!! info
-    List of hiding spots ids: `"Table","Locker","BlueLocker"`
+The list of all hiding spots are in the [enums hiding spot](enums.md/#hiding-spots) category.
 
 ---
 

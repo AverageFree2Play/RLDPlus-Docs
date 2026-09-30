@@ -2,7 +2,7 @@
 title: API
 ---
 
-[EntityData]: ../api_entity_data
+[EntityData]: api_entity_data.md
 [Vector3]: https://create.roblox.com/docs/en-us/reference/engine/datatypes/Vector3
 
 # Entity
@@ -194,7 +194,7 @@ This property will be `true` when calling [`:Destroy`](#destroy).
 #### :material-cube-outline:{.property} Type
 {read-only}
 
-The specified [`Enum.EntityType`](../enums/#entity-type) for the entity.
+The specified [`Enum.EntityType`](enums.md/#entity-type) for the entity.
 ```lua
 Entity.Type : string
 ```
