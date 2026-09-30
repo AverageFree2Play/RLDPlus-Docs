@@ -141,6 +141,7 @@ EntityData.Direction : Enum.EntityDirection
 [:fontawesome-solid-droplet:](#direction "Default value") = `"Forward"`
 
 When set to `"Forward"`, the entity will move from the starting room (last room if set to `"Backwards"`) to the room number set in [`Sequence`].
+
 ---
 #### :material-cube-outline:{.property} Rebounds
 How many times will the entity rebound for.
