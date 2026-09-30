@@ -18,8 +18,6 @@ theme:
   name: material
   favicon: images/favicon.ico
   features:
-    - navigation.instant
-    - navigation.instant.progress
     - navigation.path
     - navigation.top
     - navigation.footer
