@@ -2,7 +2,7 @@
 title: API
 ---
 
-[EntityData]: ../api_entity_data.md
+[EntityData]: ../api_entity_data
 [Vector3]: https://create.roblox.com/docs/en-us/reference/engine/datatypes/Vector3
 
 # Entity
@@ -13,7 +13,7 @@ The base class for every single entity.
 ### Constructors
 <div class="param-box">
   <div class="param-row">
-    <div class="param-header"><a href="#new">new</a>(entityModel: <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/Model">Model</a>,entityData: <a href="../api_entity_data.md">EntityData</a>)</div>
+    <div class="param-header"><a href="#new">new</a>(entityModel: <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/Model">Model</a>,entityData: <a href="../api_entity_data">EntityData</a>)</div>
   </div>
 </div>
 
@@ -35,7 +35,7 @@ The base class for every single entity.
     <div class="param-header icon-cube"> <a href="#root">Root</a> : <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/BasePart">BasePart</a> </div>
   </div>
   <div class="param-row">
-    <div class="param-header icon-cube"> <a href="#settings">Settings</a> : <a href="../api_entity_data.md">EntityData</a> </div>
+    <div class="param-header icon-cube"> <a href="#settings">Settings</a> : <a href="../api_entity_data">EntityData</a> </div>
   </div>
   <div class="param-row">
     <div class="param-header icon-cube"> <a href="#speed">Speed</a> : <a href="https://create.roblox.com/docs/en-us/luau/numbers">number</a> | <a href="./speed_data.md">SpeedData</a></div>
@@ -132,10 +132,10 @@ The base class for every single entity.
 ### Callbacks
 <div class="param-box">
   <div class="param-row">
-    <div class="param-header icon-cube-send"> <a href="#onspawn">OnSpawn</a> : () </div>
+    <div class="param-header icon-cube-send"> <a href="#onspawn">OnSpawn</a>(entity: <a href="#">Entity</a>) : () </div>
   </div>
   <div class="param-row">
-    <div class="param-header icon-cube-send"> <a href="#onfinished">OnFinished</a> : () </div>
+    <div class="param-header icon-cube-send"> <a href="#onfinished">OnFinished</a>(entity: <a href="#">Entity</a>) : () </div>
   </div>
 </div>
 
@@ -514,15 +514,12 @@ Entity:Start() : ()
 ## Events
 
 #### :material-lightning-bolt:{.event} OnStart
-{deprecated}
 
 Fires when the entity has started via [`:Start()`](#start)
 ```lua
 Entity.OnStart (): Signal
 ```
-!!! quote
-    I don't know why I added this. Since you can already code your own entity behaviour without needing this event.
-    **Avery 28/9/2026**
+
 ---
 #### :material-lightning-bolt:{.event} OnEnded
 
@@ -686,7 +683,7 @@ Entity.EntityRemoved (entity: Entity) : Signal
 Called when the entity is about to spawn in.
 ```lua
 Entity.OnSpawn (
-  self : Entity
+  entity : Entity
 ) : ()
 ```
 **Parameters**
@@ -708,7 +705,7 @@ Use this to perform starting actions to the entity. Such as playing sounds or do
 Called when the entity is about to finish.
 ```lua
 Entity.OnFinished (
-  self : Entity
+  entity : Entity
 ) : ()
 ```
 **Parameters**
@@ -717,7 +714,7 @@ Entity.OnFinished (
     <div class="param-header">
       entity : <a href="#api-reference">Entity</a>
     </div>
-    <div class="param-desc">The entity that is about to spawn.</div>
+    <div class="param-desc">The entity that is about to finish.</div>
   </div>
 </div>
 

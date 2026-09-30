@@ -37,3 +37,12 @@ Used by the entity to determine which state the entity is in.
 | `Idle`           | The entity is idling.                                                                                                                                  |
 | `Moving`         | The entity is moving.                                                                                                                                  |
 | `Deactivated`    | The entity is is deactivated. Not to be confused with `Entity.isActive`, the entity will enter this state when the entity has ended it's event sequence|
+
+## Hiding Spots
+Used by the framework to determine what hiding spot the player is currently in.
+
+| Name          | Description                           |
+| ------------- | ------------------------------------- |
+| `Table`       | The hiding spot is a generic table.   |
+| `Locker`      | The hiding spot is a generic locker.  |
+| `BlueLocker`  | The hiding spot is a BLUE locker.     |

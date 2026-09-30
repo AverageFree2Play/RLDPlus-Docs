@@ -6,7 +6,9 @@ title: API
 [MaxSpeed]: #maxspeed
 [MinSpeed]: #minspeed
 
-# API Reference
+# SpeedData
+An alternative dictionary containing the entity's speed data. Allows for more speed customization
+
 ## Properties
 #### :material-cube-outline:{.property} Speed
 The speed of the entity in studs per second.
