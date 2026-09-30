@@ -13,13 +13,133 @@ The base class for every single entity.
 ### Constructors
 <div class="param-box">
   <div class="param-row">
-    <div class="param-header"><a href="#new">new</a>(entityModel: Model,entityData: EntityData)</div>
+    <div class="param-header"><a href="#new">new</a>(entityModel: <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/Model">Model</a>,entityData: <a href="../api_entity_data.md">EntityData</a>)</div>
   </div>
 </div>
+
 ### Properties
+<div class="param-box">
+  <div class="param-row">
+    <div class="param-header icon-cube"> <a href="#isactive">isActive</a> : <a href="https://create.roblox.com/docs/en-us/luau/booleans">boolean</a> </div>
+  </div>
+  <div class="param-row">
+    <div class="param-header icon-cube"> <a href="#isdestroyed">isDestroyed</a> : <a href="https://create.roblox.com/docs/en-us/luau/booleans">boolean</a> </div>
+  </div>
+  <div class="param-row">
+  <div class="param-header icon-cube"> <a href="#type">Type</a> : <a href="../enums/#entity-type">Enum.EntityType</a> </div>
+  </div>
+  <div class="param-row">
+    <div class="param-header icon-cube"> <a href="#model">Model</a> : <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/Model">Model</a> </div>
+  </div>
+  <div class="param-row">
+    <div class="param-header icon-cube"> <a href="#root">Root</a> : <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/BasePart">BasePart</a> </div>
+  </div>
+  <div class="param-row">
+    <div class="param-header icon-cube"> <a href="#settings">Settings</a> : <a href="../api_entity_data.md">EntityData</a> </div>
+  </div>
+  <div class="param-row">
+    <div class="param-header icon-cube"> <a href="#speed">Speed</a> : <a href="https://create.roblox.com/docs/en-us/luau/numbers">number</a> | <a href="./speed_data.md">SpeedData</a></div>
+  </div>
+  <div class="param-row">
+    <div class="param-header icon-cube"> <a href="#state">State</a> : <a href="../enums/#entity-state">Enum.EntityState</a> </div>
+  </div>
+  <div class="param-row">
+    <div class="param-header icon-cube"> <a href="#direction">Direction</a> : <a href="../enums/#entity-direction">Enum.EntityDirection</a> </div>
+  </div>
+  <div class="param-row">
+    <div class="param-header icon-cube"> <a href="#currentroom">CurrentRoom</a> : <a href="https://create.roblox.com/docs/en-us/luau/numbers">number</a> </div>
+  </div>
+</div>
+
 ### Methods
+<div class="param-box">
+  <div class="param-row">
+    <div class="param-header icon-cube-send"><a href="#getposition">GetPosition</a> () : <a href="https://create.roblox.com/docs/en-us/reference/engine/datatypes/Vector3">Vector3</a></div>
+  </div>
+  <div class="param-row">
+    <div class="param-header icon-cube-send"><a href="#gettarget">GetTarget</a> () : <a href="https://create.roblox.com/docs/en-us/reference/engine/datatypes/Vector3">Vector3</a>?</div>
+  </div>  
+  <div class="param-row">
+    <div class="param-header icon-cube-send"><a href="#canseetarget">CanSeeTarget</a> (target: <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/Model">Model</a>|<a href="https://create.roblox.com/docs/en-us/reference/engine/classes/Player">Player</a>) : <a href="https://create.roblox.com/docs/en-us/luau/booleans">boolean</a></div>
+  </div>
+  <div class="param-row">
+      <div class="param-header icon-cube-send"><a href="#isplayerhiding">IsPlayerHiding</a> (player: <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/Player">Player</a>) : <a href="https://create.roblox.com/docs/en-us/luau/booleans">boolean</a></div>
+  </div>
+  <div class="param-row">
+      <div class="param-header icon-cube-send"><a href="#changestate">ChangeState</a> (state: <a href="../enums/#entity-state">Enum.EntityState</a>) : ()</div>
+  </div>
+  <div class="param-row">
+      <div class="param-header icon-cube-send"><a href="#moveto">MoveTo</a> (location: <a href="https://create.roblox.com/docs/en-us/reference/engine/datatypes/Vector3">Vector3</a>) : ()</div>
+  </div>
+  <div class="param-row">
+      <div class="param-header icon-cube-send"><a href="#addtojanitor">AddToJanitor</a> (object: T,methodName?: <a href="https://create.roblox.com/docs/en-us/luau/booleans">boolean</a>|<a href="https://create.roblox.com/docs/en-us/luau/strings">string</a>,index?) : T</div>
+  </div>
+  <div class="param-row">
+      <div class="param-header icon-cube-send"><a href="#movetoroom">MoveToRoom</a> (roomNum: <a href="https://create.roblox.com/docs/en-us/luau/numbers">number</a>) : ()</div>
+  </div>
+  <div class="param-row">
+      <div class="param-header icon-cube-send"><a href="#destroy">Destroy</a> () : ()</div>
+  </div>
+  <div class="param-row">
+    <div class="param-header icon-cube-send"><a href="#setpos">SetPos</a> (pos: <a href="https://create.roblox.com/docs/en-us/reference/engine/datatypes/Vector3">Vector3</a>, lookAt: <a href="https://create.roblox.com/docs/en-us/reference/engine/datatypes/Vector3">Vector3</a>?) : ()</div>
+  </div>
+  <div class="param-row">
+      <div class="param-header icon-cube-send"><a href="#setsetting">SetSetting</a> (setting: <a href="https://create.roblox.com/docs/en-us/luau/strings">string</a>,value: any) : ()</div>
+  </div>
+  <div class="param-row">
+      <div class="param-header icon-cube-send"><a href="#start">Start</a> () : ()</div>
+  </div>
+</div>
+
 ### Events
+<div class="param-box">
+  <div class="param-row">
+    <div class="param-header icon-lightning"><a href="#onstart">OnStart</a> (): <a href="https://create.roblox.com/docs/en-us/reference/engine/datatypes/RBXScriptSignal">Signal</a></div>
+  </div>
+  <div class="param-row">
+    <div class="param-header icon-lightning"><a href="#onended">OnEnded</a> (): <a href="https://create.roblox.com/docs/en-us/reference/engine/datatypes/RBXScriptSignal">Signal</a></div>
+  </div>
+  <div class="param-row">
+    <div class="param-header icon-lightning"><a href="#onhit">OnHit</a> (player: <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/Player">Player</a>): <a href="https://create.roblox.com/docs/en-us/reference/engine/datatypes/RBXScriptSignal">Signal</a></div>
+  </div>
+  <div class="param-row">
+    <div class="param-header icon-lightning"><a href="#onkill">OnKill</a> (player: <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/Player">Player</a>): <a href="https://create.roblox.com/docs/en-us/reference/engine/datatypes/RBXScriptSignal">Signal</a></div>
+  </div>
+  <div class="param-row">
+    <div class="param-header icon-lightning"><a href="#onroomreached">OnRoomReached</a> (roomNum: <a href="https://create.roblox.com/docs/en-us/luau/numbers">number</a>): <a href="https://create.roblox.com/docs/en-us/reference/engine/datatypes/RBXScriptSignal">Signal</a></div>
+  </div>
+  <div class="param-row">
+    <div class="param-header icon-lightning"><a href="#onupdate">OnUpdate</a> (deltaTime: <a href="https://create.roblox.com/docs/en-us/luau/numbers">number</a>): <a href="https://create.roblox.com/docs/en-us/reference/engine/datatypes/RBXScriptSignal">Signal</a></div>
+  </div>
+  <div class="param-row">
+    <div class="param-header icon-lightning"><a href="#onrebound">OnRebound</a> (rebounds: <a href="https://create.roblox.com/docs/en-us/luau/numbers">number</a>): <a href="https://create.roblox.com/docs/en-us/reference/engine/datatypes/RBXScriptSignal">Signal</a></div>
+  </div>
+  <div class="param-row">
+    <div class="param-header icon-lightning"><a href="#movetofinished">MoveToFinished</a> (reached: <a href="https://create.roblox.com/docs/en-us/luau/booleans">boolean</a>): <a href="https://create.roblox.com/docs/en-us/reference/engine/datatypes/RBXScriptSignal">Signal</a></div>
+  </div>
+  <div class="param-row">
+    <div class="param-header icon-lightning"><a href="#statechanged">StateChanged</a> (state: <a href="https://create.roblox.com/docs/en-us/luau/strings">string</a>): <a href="https://create.roblox.com/docs/en-us/reference/engine/datatypes/RBXScriptSignal">Signal</a></div>
+  </div>
+  <div class="param-row">
+    <div class="param-header icon-lightning"><a href="#entityadded">EntityAdded</a> (entity: <a href="#">Entity</a>) : <a href="https://create.roblox.com/docs/en-us/reference/engine/datatypes/RBXScriptSignal">Signal</a></div>
+  </div>
+  <div class="param-row">
+    <div class="param-header icon-lightning"><a href="#entityremoved">EntityRemoved</a> (entity: <a href="#">Entity</a>) : <a href="https://create.roblox.com/docs/en-us/reference/engine/datatypes/RBXScriptSignal">Signal</a></div>
+  </div>
+</div>
+
+
 ### Callbacks
+<div class="param-box">
+  <div class="param-row">
+    <div class="param-header icon-cube-send"> <a href="#onspawn">OnSpawn</a> : () </div>
+  </div>
+  <div class="param-row">
+    <div class="param-header icon-cube-send"> <a href="#onfinished">OnFinished</a> : () </div>
+  </div>
+</div>
+
+---
 
 ## Constructor
 
@@ -74,7 +194,7 @@ This property will be `true` when calling [`:Destroy`](#destroy).
 #### :material-cube-outline:{.property} Type
 {read-only}
 
-The specified [`Enum.EntityType`](enums.md/#entity-type) for the entity.
+The specified [`Enum.EntityType`](../enums/#entity-type) for the entity.
 ```lua
 Entity.Type : string
 ```
@@ -119,9 +239,9 @@ This property can be either a number or a special [`SpeedData`](./speed_data.md)
 #### :material-cube-outline:{.property} State
 Determines the entity's current state.
 ```lua
-Entity.State : string
+Entity.State : Enum.EntityState
 ```
-This property can be modified directly or using `Entity:ChangeState()`.
+This property can be modified directly or using [`Entity:ChangeState()`](#changestate).
 !!! warning
     Changing the entity's state may cause unwanted behavior.
 ---
@@ -130,10 +250,8 @@ This property can be modified directly or using `Entity:ChangeState()`.
 
 The direction the entity is currently moving.
 ```lua
-Entity.Direction : string
+Entity.Direction : Enum.EntityDirection
 ```
-!!! info
-    There are 2 valid directions: "Forward" and "Backward"
 ---
 #### :material-cube-outline:{.property} CurrentRoom
 {read-only}
@@ -144,6 +262,7 @@ Entity.CurrentRoom : number
 ```
 This is a dynamic property. Meaning it will change overtime.
 ---
+
 ## Methods
 #### :material-cube-send:{.function} GetPosition
 Returns the entity's position in [Vector3]
@@ -239,13 +358,13 @@ Entity:IsPlayerHiding(player: Player) : boolean
 
 Force set the entity's current state.
 ```lua
-Entity:ChangeState(state: string) : ()
+Entity:ChangeState(state: Enum.EntityState) : ()
 ```
 **Parameters**
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      state : <a href="https://create.roblox.com/docs/en-us/luau/strings">string</a>
+      state : <a href="../enums/#entity-state">Enum.EntityState</a>
     </div>
     <div class="param-desc">The state to set to the current state of entity.</div>
   </div>
@@ -513,13 +632,13 @@ Entity.MoveToFinished (reached: boolean): Signal
 #### :material-lightning-bolt:{.event} StateChanged
 Fires whenever the entity's state changes.
 ```lua
-Entity.StateChanged (state: string): Signal
+Entity.StateChanged (state: Enum.EntityState): Signal
 ```
 **Parameters**
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      state : <a href="https://create.roblox.com/docs/en-us/luau/strings">string</a>
+      state : <a href="../enums/#entity-state">Enum.EntityState</a>
     </div>
     <div class="param-desc">The current state of the entity.</div>
   </div>
@@ -549,7 +668,7 @@ Entity.EntityAdded (entity: Entity) : Signal
 
 Fires when an entity is removed via the [:Destroy()](#destroy) method.
 ```lua
-Entity.EntityAdded (entity: Entity) : Signal
+Entity.EntityRemoved (entity: Entity) : Signal
 ```
 **Parameters**
 <div class="param-box">

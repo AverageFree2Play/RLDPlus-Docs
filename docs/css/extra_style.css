@@ -35,6 +35,42 @@
   color: #ffffff;
 }
 
+.icon-cube::before {
+  content: "";
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: -0.15em;
+  background-color: #1AC8FF;
+  /* Use the exact SVG mask for the cube icon */
+  -webkit-mask: url('https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/material/templates/.icons/material/cube-outline.svg') no-repeat center / contain;
+  mask: url('https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/material/templates/.icons/material/cube-outline.svg') no-repeat center / contain;
+}
+
+.icon-cube-send::before{
+  content: "";
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  margin-right: 0.6em;
+  vertical-align: -0.15em;
+  background-color: #d466e5;
+  -webkit-mask: url('https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/material/templates/.icons/material/cube-send.svg') no-repeat center / contain;
+  mask: url('https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/material/templates/.icons/material/cube-send.svg') no-repeat center / contain;
+}
+
+.icon-lightning::before{
+  content: "";
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  margin-right: 0.6em;
+  vertical-align: -0.15em;
+  background-color: #f2ba2a;
+  -webkit-mask: url('https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/material/templates/.icons/material/lightning-bolt.svg') no-repeat center / contain;
+  mask: url('https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/material/templates/.icons/material/lightning-bolt.svg') no-repeat center / contain;
+}
+
 /* Description text */
 .param-desc {
   color: #a0a0a0;
