@@ -14,7 +14,7 @@
         <link rel="prev" href="../features/">
       
       
-        <link rel="next" href="../speed_data/">
+        <link rel="next" href="../api_entity_data/">
       
       
         
@@ -1092,7 +1092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api_entity_data.md" class="md-nav__link">
+      <a href="../api_entity_data/" class="md-nav__link">
         
   
   
@@ -2091,7 +2091,7 @@
 <h3 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Anchor link to this section for reference">&para;</a></h3>
 <div class="param-box">
   <div class="param-row">
-    <div class="param-header"><a href="#new">new</a>(entityModel: <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/Model">Model</a>,entityData: <a href="../api_entity_data.md">EntityData</a>)</div>
+    <div class="param-header"><a href="#new">new</a>(entityModel: <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/Model">Model</a>,entityData: <a href="../api_entity_data">EntityData</a>)</div>
   </div>
 </div>
 
@@ -2113,7 +2113,7 @@
     <div class="param-header icon-cube"> <a href="#root">Root</a> : <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/BasePart">BasePart</a> </div>
   </div>
   <div class="param-row">
-    <div class="param-header icon-cube"> <a href="#settings">Settings</a> : <a href="../api_entity_data.md">EntityData</a> </div>
+    <div class="param-header icon-cube"> <a href="#settings">Settings</a> : <a href="../api_entity_data">EntityData</a> </div>
   </div>
   <div class="param-row">
     <div class="param-header icon-cube"> <a href="#speed">Speed</a> : <a href="https://create.roblox.com/docs/en-us/luau/numbers">number</a> | <a href="./speed_data.md">SpeedData</a></div>
@@ -2209,10 +2209,10 @@
 <h3 id="callbacks">Callbacks<a class="headerlink" href="#callbacks" title="Anchor link to this section for reference">&para;</a></h3>
 <div class="param-box">
   <div class="param-row">
-    <div class="param-header icon-cube-send"> <a href="#onspawn">OnSpawn</a> : () </div>
+    <div class="param-header icon-cube-send"> <a href="#onspawn">OnSpawn</a>(entity: <a href="#">Entity</a>) : () </div>
   </div>
   <div class="param-row">
-    <div class="param-header icon-cube-send"> <a href="#onfinished">OnFinished</a> : () </div>
+    <div class="param-header icon-cube-send"> <a href="#onfinished">OnFinished</a>(entity: <a href="#">Entity</a>) : () </div>
   </div>
 </div>
 
@@ -2264,7 +2264,7 @@ This property will be <code>true</code> when calling <a href="#destroy"><code>:D
 <p>The specified <a href="../enums/#entity-type"><code>Enum.EntityType</code></a> for the entity.
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="py">Type</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">string</span>
 </span></code></pre></div>
-This property is automatically set from the <a href="../api_entity_data.md">EntityData</a>.</p>
+This property is automatically set from the <a href="../api_entity_data/">EntityData</a>.</p>
 <hr />
 <h4 id="model"><span class="twemoji property"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.99.99 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88zM12 4.15 6.04 7.5 12 10.85l5.96-3.35zM5 15.91l6 3.38v-6.71L5 9.21zm14 0v-6.7l-6 3.37v6.71z"/></svg></span> Model<a class="headerlink" href="#model" title="Anchor link to this section for reference">&para;</a></h4>
 <p>{read-only}</p>
@@ -2282,7 +2282,7 @@ This property is automatically set from the entity's Model.</p>
 <hr />
 <h4 id="settings"><span class="twemoji property"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.99.99 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88zM12 4.15 6.04 7.5 12 10.85l5.96-3.35zM5 15.91l6 3.38v-6.71L5 9.21zm14 0v-6.7l-6 3.37v6.71z"/></svg></span> Settings<a class="headerlink" href="#settings" title="Anchor link to this section for reference">&para;</a></h4>
 <p>{read-only}</p>
-<p>The entity's <a href="../api_entity_data.md">EntityData</a>.
+<p>The entity's <a href="../api_entity_data/">EntityData</a>.
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="py">Settings</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">EntityData</span>
 </span></code></pre></div>
 This property is automatically set from the <a href="#constructor">constructor</a>.</p>
@@ -2551,15 +2551,9 @@ This is a dynamic property. Meaning it will change overtime.</p>
 <hr />
 <h2 id="events_1">Events<a class="headerlink" href="#events_1" title="Anchor link to this section for reference">&para;</a></h2>
 <h4 id="onstart"><span class="twemoji event"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> OnStart<a class="headerlink" href="#onstart" title="Anchor link to this section for reference">&para;</a></h4>
-<p>{deprecated}</p>
 <p>Fires when the entity has started via <a href="#start"><code>:Start()</code></a>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">OnStart</span><span class="w"> </span><span class="p">():</span><span class="w"> </span><span class="nv">Signal</span>
 </span></code></pre></div></p>
-<div class="admonition quote">
-<p class="admonition-title">Quote</p>
-<p>I don't know why I added this. Since you can already code your own entity behaviour without needing this event.
-<strong>Avery 28/9/2026</strong></p>
-</div>
 <hr />
 <h4 id="onended"><span class="twemoji event"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> OnEnded<a class="headerlink" href="#onended" title="Anchor link to this section for reference">&para;</a></h4>
 <p>Fires when the entity has completed it's event sequence.
@@ -2701,7 +2695,7 @@ This is a dynamic property. Meaning it will change overtime.</p>
 <h4 id="onspawn"><span class="twemoji function"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 4 9 8.04v7.92L16 20l7-4.04V8.04m-7-1.73 3.8 2.19-3.8 2.19-3.79-2.19M0 7v2h7V7m4 3.11 4 2.31v4.69l-4-2.3m10-4.7v4.7l-4 2.3v-4.69M2 11v2h5v-2m-3 4v2h3v-2"/></svg></span> OnSpawn<a class="headerlink" href="#onspawn" title="Anchor link to this section for reference">&para;</a></h4>
 <p>Called when the entity is about to spawn in.
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">OnSpawn</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="w">  </span><span class="nv">self</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Entity</span>
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="w">  </span><span class="nv">entity</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Entity</span>
 </span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">()</span>
 </span></code></pre></div>
 <strong>Parameters</strong></p>
@@ -2723,7 +2717,7 @@ This is a dynamic property. Meaning it will change overtime.</p>
 <h4 id="onfinished"><span class="twemoji function"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 4 9 8.04v7.92L16 20l7-4.04V8.04m-7-1.73 3.8 2.19-3.8 2.19-3.79-2.19M0 7v2h7V7m4 3.11 4 2.31v4.69l-4-2.3m10-4.7v4.7l-4 2.3v-4.69M2 11v2h5v-2m-3 4v2h3v-2"/></svg></span> OnFinished<a class="headerlink" href="#onfinished" title="Anchor link to this section for reference">&para;</a></h4>
 <p>Called when the entity is about to finish.
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">OnFinished</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="w">  </span><span class="nv">self</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Entity</span>
+</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="w">  </span><span class="nv">entity</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Entity</span>
 </span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">()</span>
 </span></code></pre></div>
 <strong>Parameters</strong></p>
@@ -2732,7 +2726,7 @@ This is a dynamic property. Meaning it will change overtime.</p>
     <div class="param-header">
       entity : <a href="#api-reference">Entity</a>
     </div>
-    <div class="param-desc">The entity that is about to spawn.</div>
+    <div class="param-desc">The entity that is about to finish.</div>
   </div>
 </div>
 
@@ -2792,13 +2786,13 @@ This is a dynamic property. Meaning it will change overtime.</p>
         
         
           
-          <a href="../speed_data/" class="md-footer__link md-footer__link--next" aria-label="Next: SpeedData">
+          <a href="../api_entity_data/" class="md-footer__link md-footer__link--next" aria-label="Next: EntityData">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                SpeedData
+                EntityData
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2851,7 +2845,7 @@ This is a dynamic property. Meaning it will change overtime.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.path", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "search.share", "toc.follow", "header.autohide", "content.code.annotate", "content.code.copy", "content.code.select"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.path", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "search.share", "toc.follow", "header.autohide", "content.tooltips", "content.code.annotate", "content.code.copy", "content.code.select"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
