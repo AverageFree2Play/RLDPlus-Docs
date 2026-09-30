@@ -351,11 +351,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#coding" class="md-nav__link">
+  <a href="#customization" class="md-nav__link">
     <span class="md-ellipsis">
       
         <span class="md-typeset">
-          Coding
+          Customization
         </span>
       
     </span>
@@ -784,11 +784,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#coding" class="md-nav__link">
+  <a href="#customization" class="md-nav__link">
     <span class="md-ellipsis">
       
         <span class="md-typeset">
-          Coding
+          Customization
         </span>
       
     </span>
@@ -830,39 +830,72 @@
 <p>The module is still work in progress and there will be more features to come.</p>
 <hr />
 <h2 id="constructing">Constructing<a class="headerlink" href="#constructing" title="Anchor link to this section for reference">&para;</a></h2>
-<p>Creating an entity is as follows:
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">Entity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="nv">path_to_module</span><span class="p">.</span><span class="py">Entity</span><span class="p">)</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kd">local</span><span class="w"> </span><span class="nv">EntityModel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">path_to_model</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kd">local</span><span class="w"> </span><span class="nv">EntityData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nv">Speed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nv">SpawnLocation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nv">Direction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Forward"</span><span class="p">;</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">}</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="kd">local</span><span class="w"> </span><span class="nv">myEntity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Entity</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="nv">EntityModel</span><span class="p">,</span><span class="nv">EntityData</span><span class="p">)</span>
-</span></code></pre></div></p>
-<p>This will construct an entity with an existing model that has a speed of 25 studs/second, spawns at the first room and goes forward to the last room.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>When creating an entity using the <code>.new</code> constructor. The entity will not do anything because the entity isn't active.</p>
-</div>
-<p>To make an entity to start it's behaviour, do:</p>
-<p><div class="language-lua highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">myEntity</span><span class="p">:</span><span class="nf">Start</span><span class="p">()</span>
-</span></code></pre></div>
-This will make the entity to start it's actions based on your <code>EntityData</code>.
-If you want your entity to do custom actions or write your own code for your entity. Look at the <a href="#coding">coding</a> section below.</p>
+<p>Creating an entity is as simple as follows:</p>
+<div class="language-lua highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">EntityData.lua</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">-- Paste this code inside a ModuleScript and put it inside your entity model.</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kd">local</span><span class="w"> </span><span class="nv">EntityModel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">script</span><span class="p">.</span><span class="py">Parent</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kd">local</span><span class="w"> </span><span class="nv">EntityData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="nv">Type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Generic"</span><span class="p">;</span><span class="w"> </span><span class="c1">-- (1)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="nv">Speed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span><span class="w"> </span><span class="c1">-- (2)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="nv">SpawnLocation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">-- (3)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="nv">Direction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Forward"</span><span class="p">;</span><span class="w"> </span><span class="c1">-- (4)</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="p">}</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="kr">return</span><span class="w"> </span><span class="nv">EntityData</span>
+</span></code></pre></div></td></tr></table></div>
+<ol>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9.5 7.5 14h-5zM3 4h4v4H3zm2 16a2 2 0 0 0 2-2 2 2 0 0 0-2-2 2 2 0 0 0-2 2 2 2 0 0 0 2 2M9 5v2h12V5zm0 14h12v-2H9zm0-6h12v-2H9z"/></svg></span> This will set the entity type to a generic entity.</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M104.5 24a56 56 0 1 1 112 0 56 56 0 1 1-112 0m-8 181.3-22.6 22.6c-6 6-9.4 14.1-9.4 22.6V288c0 17.7-14.3 32-32 32s-32-14.3-32-32v-37.5c0-25.5 10.1-49.9 28.1-67.9l35.1-35.1c22.8-22.8 53.6-35.6 85.8-35.6 36.9 0 71.8 16.8 94.8 45.6l18 22.5c6.1 7.6 15.3 12 25 12h33.2c17.7 0 32 14.3 32 32s-14.3 32-32 32h-33.2c-29.2 0-56.7-13.3-75-36l-3.8-4.7v115.2l34.5 29.6c17.7 15.2 29.3 36.2 32.6 59.3l12.6 88.1c2.5 17.5-9.7 33.7-27.2 36.2s-33.7-9.7-36.2-27.2l-12.6-88.1c-1.1-7.7-5-14.7-10.9-19.8L130 347.5c-21.3-18.2-33.5-44.9-33.5-72.9zm.1 165.7c2.4 2.3 4.8 4.6 7.4 6.8l46 39.4-2.2 7.6c-4.5 15.7-12.9 30-24.4 41.5l-68.3 68.3c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L78.1 421c3.8-3.8 6.6-8.6 8.1-13.8zm408.9-26c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31H400.5c-13.3 0-24-10.7-24-24s10.7-24 24-24h102.1l-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l72 72c9.4 9.4 9.4 24.6 0 33.9l-72 72z"/></svg></span> This will make the entity move at the speed of 25 studs per second.</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M192-32a56 56 0 1 1 0 112 56 56 0 1 1 0-112m126.3 331.1L272 236.7V480h272c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h80V236.7l-46.3 62.4c-10.5 14.2-30.6 17.2-44.8 6.6s-17.2-30.6-6.6-44.8l70.5-95C110 132 149.7 112 192 112s82 20 107.2 53.9l70.5 95c10.5 14.2 7.6 34.2-6.6 44.8s-34.2 7.6-44.8-6.6M176 480h32V352c0-8.8-7.2-16-16-16s-16 7.2-16 16zm390.6-313.4-80 80c-12.5 12.5-32.8 12.5-45.3 0l-80-80c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l25.4 25.4V0c0-17.7 14.3-32 32-32s32 14.3 32 32v146.7l25.4-25.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3z"/></svg></span> This will make the entity spawn at the starting room (room 0)</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8V4l8 8-8 8v-4H4V8z"/></svg></span> This will make the entity move forward (from the starting room to the last room)</li>
+</ol>
+<p>The framework will automatically construct an entity with an existing model that has a speed of 25 studs/second, spawns at the first room and goes forward to the last room.</p>
 <hr />
-<h2 id="coding">Coding<a class="headerlink" href="#coding" title="Anchor link to this section for reference">&para;</a></h2>
-<p>Normally, you would just write your own code for your entity to do specific actions. But when using the Entity class it becomes limited.
-To combat this, you can use the events that are created alongside your entity.</p>
-<p>To make an entity do a certain thing when it reaches a room, do:</p>
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nv">myEntity</span><span class="p">.</span><span class="py">OnRoomReached</span><span class="p">:</span><span class="nf">Connect</span><span class="p">(</span><span class="kr">function</span><span class="p">(</span><span class="nv">roomNum</span><span class="p">:</span><span class="w"> </span><span class="py">number</span><span class="p">)</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"I"</span><span class="p">,</span><span class="nv">myEntity</span><span class="p">.</span><span class="py">Name</span><span class="p">,</span><span class="s2">"has reached room number:"</span><span class="p">,</span><span class="nv">roomNum</span><span class="p">)</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kr">end</span><span class="p">)</span>
-</span></code></pre></div>
-<p>To find out more about events, check the <a href="api_entity/">API Reference</a> for events.</p>
-<hr />
+<h2 id="customization">Customization<a class="headerlink" href="#customization" title="Anchor link to this section for reference">&para;</a></h2>
+<p>To add your own functionality to the entity, you can add a callback function directly inside your settings table to make the entity run code.</p>
+<div class="language-lua highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">EntityData.lua</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">EntityData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="p">...</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="nv">OnSpawn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="nv">Entity</span><span class="p">)</span><span class="w"> </span><span class="c1">-- (1)</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">"The entity has spawned!"</span><span class="p">)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">        </span><span class="c1">-- your code goes here lulz</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="kr">end</span><span class="p">,</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="nv">OnFinished</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="nv">Entity</span><span class="p">)</span><span class="w"> </span><span class="c1">-- (2)</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">        </span><span class="nf">Print</span><span class="p">(</span><span class="s2">"The entity has finished!"</span><span class="p">)</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">        </span><span class="c1">-- code goes here. braah</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="kr">end</span><span class="p">,</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="p">}</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="kr">return</span><span class="w"> </span><span class="nv">EntityData</span>
+</span></code></pre></div></td></tr></table></div>
+<ol>
+<li>This will bind a function to the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 4 9 8.04v7.92L16 20l7-4.04V8.04m-7-1.73 3.8 2.19-3.8 2.19-3.79-2.19M0 7v2h7V7m4 3.11 4 2.31v4.69l-4-2.3m10-4.7v4.7l-4 2.3v-4.69M2 11v2h5v-2m-3 4v2h3v-2"/></svg></span> <code>OnSpawn</code> callback which will be called when the entity is about to spawn.</li>
+<li>This will bind a function to the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 4 9 8.04v7.92L16 20l7-4.04V8.04m-7-1.73 3.8 2.19-3.8 2.19-3.79-2.19M0 7v2h7V7m4 3.11 4 2.31v4.69l-4-2.3m10-4.7v4.7l-4 2.3v-4.69M2 11v2h5v-2m-3 4v2h3v-2"/></svg></span> <code>OnFinished</code> callback which will be called when the entity is about to finish it's sequence.</li>
+</ol>
+<p>The <a href="api_entity/"><code>Entity</code></a> parameter is the entity class itself. Which contain important properties, methods and events like the entity's current <a href="api_entity/#state"><code>State</code></a>, core methods like <a href="api_entity/#canseetarget"><code>Entity:CanSeeTarget()</code></a></p>
 
 
 
@@ -961,7 +994,7 @@ To combat this, you can use the events that are created alongside your entity.</
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.path", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "search.share", "toc.follow", "header.autohide", "content.code.annotate"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.path", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "search.share", "toc.follow", "header.autohide", "content.code.annotate", "content.code.copy", "content.code.select"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.d7400e89.min.js"></script>

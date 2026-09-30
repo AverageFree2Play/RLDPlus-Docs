@@ -70,6 +70,59 @@ var replaceStuff = [
     ["{toggleable}", '<p class="tag toggleable">toggleable</p>'],
 ];
 
+/**
+ * Enhances a tag element with a hover tooltip.
+ * 
+ * @param {HTMLElement} tagElement - The DOM element representing the tag.
+ * @param {string} tooltipText - The text description to display inside the tooltip.
+ */
+function addTagTooltip(tagElement, tooltipText) {
+    if (!tagElement || !tooltipText) return;
+
+    // 1. Ensure parent tag has relative positioning for correct tooltip placement
+    tagElement.style.position = 'relative';
+    tagElement.style.cursor = 'pointer';
+
+    // 2. Create tooltip container
+    const tooltip = document.createElement('span');
+    tooltip.className = 'tag-tooltip';
+    tooltip.textContent = tooltipText;
+
+    // 3. Apply baseline CSS styles for the tooltip
+    Object.assign(tooltip.style, {
+        position: 'absolute',
+        bottom: '125%', // Position above the tag
+        left: '50%',
+        transform: 'translateX(-50%)',
+        backgroundColor: '#333',
+        color: '#fff',
+        padding: '4px 8px',
+        borderRadius: '4px',
+        fontSize: '12px',
+        whiteSpace: 'nowrap',
+        visibility: 'hidden',
+        opacity: '0',
+        transition: 'opacity 0.2s ease, visibility 0.2s ease',
+        zIndex: '1000',
+        pointerEvents: 'none',
+        boxShadow: '0px 2px 5px rgba(0,0,0,0.2)'
+    });
+
+    // 4. Attach hover event listeners
+    tagElement.addEventListener('mouseenter', () => {
+        tooltip.style.visibility = 'visible';
+        tooltip.style.opacity = '1';
+    });
+
+    tagElement.addEventListener('mouseleave', () => {
+        tooltip.style.visibility = 'hidden';
+        tooltip.style.opacity = '0';
+    });
+
+    // 5. Append tooltip to tag element
+    tagElement.appendChild(tooltip);
+}
+
 function replace(element) {
     for (var i = 0; i < replaceStuff.length; i++) {
         var from = replaceStuff[i][0]
