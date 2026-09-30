@@ -27,6 +27,8 @@ theme:
     - toc.follow
     - header.autohide
     - content.code.annotate
+    - content.code.copy
+    - content.code.select
   palette:
     - scheme: default
       media: "(prefers-color-scheme: light)"
