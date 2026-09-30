@@ -75,9 +75,9 @@ The settings dictionary for the Entity class.
 ## Properties
 #### :material-cube-outline:{.property} Type
 ```lua
-EntityData.Type : string
+EntityData.Type : Enum.EntityType
 ```
-
+The entity's type. 
 ---
 #### :material-cube-outline:{.property} SpawnLocation
 ```lua
