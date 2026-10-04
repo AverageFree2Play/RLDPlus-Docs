@@ -7,6 +7,10 @@
   font-family: inherit;
 }
 
+[data-md-color-scheme="default"] .param-box {
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
 /* Row styling */
 .param-row {
   padding: 12px 16px;
@@ -24,6 +28,10 @@
   color: #e6e6e6;
 }
 
+[data-md-color-scheme="default"] .param-header {
+  color: #191919;
+}
+
 /* Type link styling with underline */
 .param-header a {
   color: #ffffff;
@@ -33,6 +41,10 @@
 }
 .param-header a:hover {
   color: #ffffff;
+}
+
+[data-md-color-scheme="default"] .param-header a {
+  color: #000000;
 }
 
 .icon-cube::before {
@@ -79,20 +91,6 @@
   margin-top: 4px;
 }
 
-.badge {
-  display: inline-block;
-  padding: 2px 8px;
-  font-size: 0.75rem;
-  font-weight: 500;
-  border-radius: 4px; /* Adjust radius for rounded corners */
-  background-color: var(--md-code-bg-color, #22272e);
-  color: var(--md-typeset-color, #adbac7);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  margin-right: 6px;
-  line-height: 1.4;
-  vertical-align: middle;
-}
-
 .property{
   color: #1ac8ff;
 }
@@ -103,11 +101,4 @@
 
 .event{
   color: #f2ba2a;
-}
-
-/* Optional light/dark mode override if needed */
-[data-md-color-scheme="slate"] .badge {
-  background-color: #22272e;
-  color: #adbac7;
-  border-color: #373e47;
 }
