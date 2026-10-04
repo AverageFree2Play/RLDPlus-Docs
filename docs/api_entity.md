@@ -139,10 +139,13 @@ The base class for every single entity.
   </div>
 </div>
 
+**Inherited By**
+
+[Chaser](api_chaser.md)
+
 ---
-
-## Constructor
-
+## API Reference
+### Constructor
 #### new
 {static}
 
@@ -172,7 +175,7 @@ Entity.new(entityModel: Model,entityData: EntityData)
 </div>
 ---
 
-## Properties
+### Properties
 #### :material-cube-outline:{.property} isActive
 {read-only}
 
@@ -263,7 +266,7 @@ Entity.CurrentRoom : number
 This is a dynamic property. Meaning it will change overtime.
 ---
 
-## Methods
+### Methods
 #### :material-cube-send:{.function} GetPosition
 Returns the entity's position in [Vector3]
 ```lua
@@ -511,7 +514,7 @@ Entity:Start() : ()
     If the entity's `EntityData` has no `onInit` function. This method is automatically called.
 
 ---
-## Events
+### Events
 
 #### :material-lightning-bolt:{.event} OnStart
 
@@ -678,7 +681,7 @@ Entity.EntityRemoved (entity: Entity) : Signal
 </div>
 
 ---
-## Callbacks
+### Callbacks
 #### :material-cube-send:{.function} OnSpawn
 Called when the entity is about to spawn in.
 ```lua

@@ -72,7 +72,10 @@ The settings dictionary for the Entity class.
 </div>
 
 ---
-## Properties
+
+## API Reference
+
+### Properties
 #### :material-cube-outline:{.property} Type
 {required}
 
@@ -216,7 +219,7 @@ EntityData.Screenshake : {[string]: Variant}
 ```
 
 ---
-## Callbacks
+### Callbacks
 #### :material-cube-send:{.function} OnSpawn
 Called when the entity is about to spawn in.
 ```lua
