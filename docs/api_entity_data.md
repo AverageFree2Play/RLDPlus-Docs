@@ -231,7 +231,7 @@ EntityData.OnSpawn (
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      entity : <a href="#api-reference">Entity</a>
+      entity : <a href="../api_entity/">Entity</a>
     </div>
     <div class="param-desc">The entity that is about to spawn.</div>
   </div>
@@ -253,7 +253,7 @@ EntityData.OnFinished (
 <div class="param-box">
   <div class="param-row">
     <div class="param-header">
-      entity : <a href="#api-reference">Entity</a>
+      entity : <a href="../api_entity/">Entity</a>
     </div>
     <div class="param-desc">The entity that is about to finish.</div>
   </div>

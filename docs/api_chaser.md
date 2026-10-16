@@ -59,7 +59,7 @@ Entity.new(entityModel: Model,chaserData: ChaserData)
 
   <div class="param-row">
     <div class="param-header">
-      chaserData : <a href="#">ChaserData</a>
+      chaserData : <a href="../api_chaser_data/">ChaserData</a>
     </div>
     <div class="param-desc">
       The ChaserData setting the entity will use.

@@ -141,7 +141,7 @@ The base class for every single entity.
 
 **Inherited By**
 
-[Chaser](api_chaser.md)
+[`Chaser`](api_chaser.md), [`Checker`](api_checker.md)
 
 ---
 ## API Reference
@@ -166,7 +166,7 @@ Entity.new(entityModel: Model,entityData: EntityData)
 
   <div class="param-row">
     <div class="param-header">
-      entityData : <a href="#">EntityData</a>
+      entityData : <a href="../api_entity_data/">EntityData</a>
     </div>
     <div class="param-desc">
       The EntityData setting the entity will use.
