@@ -2,42 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://averagefree2play.github.io/rldplus_entity_docs/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-19</lastmod>
     </url>
     <url>
          <loc>https://averagefree2play.github.io/rldplus_entity_docs/api_chaser/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-19</lastmod>
     </url>
     <url>
          <loc>https://averagefree2play.github.io/rldplus_entity_docs/api_chaser_data/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-19</lastmod>
     </url>
     <url>
          <loc>https://averagefree2play.github.io/rldplus_entity_docs/api_checker/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-19</lastmod>
     </url>
     <url>
          <loc>https://averagefree2play.github.io/rldplus_entity_docs/api_checker_data/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-19</lastmod>
     </url>
     <url>
          <loc>https://averagefree2play.github.io/rldplus_entity_docs/api_entity/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-19</lastmod>
     </url>
     <url>
          <loc>https://averagefree2play.github.io/rldplus_entity_docs/api_entity_data/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-19</lastmod>
+    </url>
+    <url>
+         <loc>https://averagefree2play.github.io/rldplus_entity_docs/api_summoner/</loc>
+         <lastmod>2026-10-19</lastmod>
+    </url>
+    <url>
+         <loc>https://averagefree2play.github.io/rldplus_entity_docs/api_summoner_data/</loc>
+         <lastmod>2026-10-19</lastmod>
     </url>
     <url>
          <loc>https://averagefree2play.github.io/rldplus_entity_docs/enums/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-19</lastmod>
     </url>
     <url>
          <loc>https://averagefree2play.github.io/rldplus_entity_docs/features/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-19</lastmod>
     </url>
     <url>
          <loc>https://averagefree2play.github.io/rldplus_entity_docs/speed_data/</loc>
-         <lastmod>2026-10-16</lastmod>
+         <lastmod>2026-10-19</lastmod>
     </url>
 </urlset>

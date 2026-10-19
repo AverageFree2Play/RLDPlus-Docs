@@ -723,6 +723,19 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#getspeed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          <span class="twemoji function"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 4 9 8.04v7.92L16 20l7-4.04V8.04m-7-1.73 3.8 2.19-3.8 2.19-3.79-2.19M0 7v2h7V7m4 3.11 4 2.31v4.69l-4-2.3m10-4.7v4.7l-4 2.3v-4.69M2 11v2h5v-2m-3 4v2h3v-2"/></svg></span> GetSpeed
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#getposition" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1251,7 +1264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api_summoner.md" class="md-nav__link">
+      <a href="../api_summoner/" class="md-nav__link">
         
   
   
@@ -1279,7 +1292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api_summoner_data.md" class="md-nav__link">
+      <a href="../api_summoner_data/" class="md-nav__link">
         
   
   
@@ -1680,6 +1693,19 @@
   
     <nav class="md-nav" aria-label="Methods">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getspeed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <span class="md-typeset">
+          <span class="twemoji function"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 4 9 8.04v7.92L16 20l7-4.04V8.04m-7-1.73 3.8 2.19-3.8 2.19-3.79-2.19M0 7v2h7V7m4 3.11 4 2.31v4.69l-4-2.3m10-4.7v4.7l-4 2.3v-4.69M2 11v2h5v-2m-3 4v2h3v-2"/></svg></span> GetSpeed
+        </span>
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#getposition" class="md-nav__link">
@@ -2173,6 +2199,9 @@
     <div class="param-header icon-cube-send"><a href="#getposition">GetPosition</a> () : <a href="https://create.roblox.com/docs/en-us/reference/engine/datatypes/Vector3">Vector3</a></div>
   </div>
   <div class="param-row">
+    <div class="param-header icon-cube-send"><a href="#getspeed">GetSpeed</a> () : <a href="https://create.roblox.com/docs/en-us/luau/numbers">number</a></div>
+  </div>
+  <div class="param-row">
     <div class="param-header icon-cube-send"><a href="#gettarget">GetTarget</a> () : <a href="https://create.roblox.com/docs/en-us/reference/engine/datatypes/Vector3">Vector3</a>?</div>
   </div>  
   <div class="param-row">
@@ -2334,6 +2363,10 @@ This property is automatically set from the <a href="#constructor">constructor</
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="py">Speed</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">SpeedData</span>
 </span></code></pre></div>
 This property can be either a number or a special <a href="../speed_data/"><code>SpeedData</code></a> dictionary.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>DO NOT USE THIS PROPERTY TO GET THE ENTITY'S SPEED! Use <code>Entity:GetSpeed()</code> instead.</p>
+</div>
 <hr />
 <h4 id="state"><span class="twemoji property"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.99.99 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88zM12 4.15 6.04 7.5 12 10.85l5.96-3.35zM5 15.91l6 3.38v-6.71L5 9.21zm14 0v-6.7l-6 3.37v6.71z"/></svg></span> State<a class="headerlink" href="#state" title="Anchor link to this section for reference">&para;</a></h4>
 <p>Determines the entity's current state.
@@ -2359,9 +2392,31 @@ This property can be modified directly or using <a href="#changestate"><code>Ent
 This is a dynamic property. Meaning it will change overtime.</p>
 <hr />
 <h3 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Anchor link to this section for reference">&para;</a></h3>
+<h4 id="getspeed"><span class="twemoji function"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 4 9 8.04v7.92L16 20l7-4.04V8.04m-7-1.73 3.8 2.19-3.8 2.19-3.79-2.19M0 7v2h7V7m4 3.11 4 2.31v4.69l-4-2.3m10-4.7v4.7l-4 2.3v-4.69M2 11v2h5v-2m-3 4v2h3v-2"/></svg></span> GetSpeed<a class="headerlink" href="#getspeed" title="Anchor link to this section for reference">&para;</a></h4>
+<p>{recommended}</p>
+<p>Returns the entity's current speed.
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nv">Entity</span><span class="p">:</span><span class="nf">GetSpeed</span><span class="p">()</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nv">Vector3</span>
+</span></code></pre></div>
+<strong>Returns</strong></p>
+<div class="param-box">
+  <div class="param-row">
+    <div class="param-header">
+      <a href="https://create.roblox.com/docs/en-us/luau/numbers">number</a>
+    </div>
+    <div class="param-desc">
+      The entity's current speed.
+    </div>
+  </div>
+</div>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It's important that you use this method to get the entity's speed. Since the introduction of <code>SpeedData</code> which gives the entity have more variations in terms of speed.</p>
+</div>
+<hr />
 <h4 id="getposition"><span class="twemoji function"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 4 9 8.04v7.92L16 20l7-4.04V8.04m-7-1.73 3.8 2.19-3.8 2.19-3.79-2.19M0 7v2h7V7m4 3.11 4 2.31v4.69l-4-2.3m10-4.7v4.7l-4 2.3v-4.69M2 11v2h5v-2m-3 4v2h3v-2"/></svg></span> GetPosition<a class="headerlink" href="#getposition" title="Anchor link to this section for reference">&para;</a></h4>
 <p>Returns the entity's position in <a href="https://create.roblox.com/docs/en-us/reference/engine/datatypes/Vector3">Vector3</a>
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nv">Entity</span><span class="p">:</span><span class="nf">GetPosition</span><span class="p">()</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nv">Vector3</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nv">Entity</span><span class="p">:</span><span class="nf">GetPosition</span><span class="p">()</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nv">Vector3</span>
 </span></code></pre></div>
 <strong>Returns</strong></p>
 <div class="param-box">
@@ -2377,7 +2432,7 @@ This is a dynamic property. Meaning it will change overtime.</p>
 <hr />
 <h4 id="gettarget"><span class="twemoji function"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 4 9 8.04v7.92L16 20l7-4.04V8.04m-7-1.73 3.8 2.19-3.8 2.19-3.79-2.19M0 7v2h7V7m4 3.11 4 2.31v4.69l-4-2.3m10-4.7v4.7l-4 2.3v-4.69M2 11v2h5v-2m-3 4v2h3v-2"/></svg></span> GetTarget<a class="headerlink" href="#gettarget" title="Anchor link to this section for reference">&para;</a></h4>
 <p>Returns the entity's MoveTo target. The MoveTo target can be set using <a href="#moveto"><code>Entity:MoveTo()</code></a>
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nv">Entity</span><span class="p">:</span><span class="nf">GetTarget</span><span class="p">()</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nv">Vector3</span><span class="err">?</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nv">Entity</span><span class="p">:</span><span class="nf">GetTarget</span><span class="p">()</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nv">Vector3</span><span class="err">?</span>
 </span></code></pre></div>
 <strong>Returns</strong></p>
 <div class="param-box">
@@ -2395,7 +2450,7 @@ This is a dynamic property. Meaning it will change overtime.</p>
 <hr />
 <h4 id="canseetarget"><span class="twemoji function"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 4 9 8.04v7.92L16 20l7-4.04V8.04m-7-1.73 3.8 2.19-3.8 2.19-3.79-2.19M0 7v2h7V7m4 3.11 4 2.31v4.69l-4-2.3m10-4.7v4.7l-4 2.3v-4.69M2 11v2h5v-2m-3 4v2h3v-2"/></svg></span> CanSeeTarget<a class="headerlink" href="#canseetarget" title="Anchor link to this section for reference">&para;</a></h4>
 <p>Returns true if the entity can detect a player in their hitbox radius or not.
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nv">Entity</span><span class="p">:</span><span class="nf">CanSeeTarget</span><span class="p">(</span><span class="nv">target</span><span class="p">:</span><span class="w"> </span><span class="py">Model</span><span class="o">|</span><span class="nv">Player</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nv">boolean</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nv">Entity</span><span class="p">:</span><span class="nf">CanSeeTarget</span><span class="p">(</span><span class="nv">target</span><span class="p">:</span><span class="w"> </span><span class="py">Model</span><span class="o">|</span><span class="nv">Player</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nv">boolean</span>
 </span></code></pre></div>
 <strong>Parameters</strong></p>
 <div class="param-box">
@@ -2419,7 +2474,7 @@ This is a dynamic property. Meaning it will change overtime.</p>
 <hr />
 <h4 id="isplayerhiding"><span class="twemoji function"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 4 9 8.04v7.92L16 20l7-4.04V8.04m-7-1.73 3.8 2.19-3.8 2.19-3.79-2.19M0 7v2h7V7m4 3.11 4 2.31v4.69l-4-2.3m10-4.7v4.7l-4 2.3v-4.69M2 11v2h5v-2m-3 4v2h3v-2"/></svg></span> IsPlayerHiding<a class="headerlink" href="#isplayerhiding" title="Anchor link to this section for reference">&para;</a></h4>
 <p>Returns true if the player is hiding in one of the valid hiding spots.
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nv">Entity</span><span class="p">:</span><span class="nf">IsPlayerHiding</span><span class="p">(</span><span class="nv">player</span><span class="p">:</span><span class="w"> </span><span class="py">Player</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nv">boolean</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nv">Entity</span><span class="p">:</span><span class="nf">IsPlayerHiding</span><span class="p">(</span><span class="nv">player</span><span class="p">:</span><span class="w"> </span><span class="py">Player</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nv">boolean</span>
 </span></code></pre></div>
 <strong>Parameters</strong></p>
 <div class="param-box">
@@ -2447,7 +2502,7 @@ This is a dynamic property. Meaning it will change overtime.</p>
 <hr />
 <h4 id="changestate"><span class="twemoji function"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 4 9 8.04v7.92L16 20l7-4.04V8.04m-7-1.73 3.8 2.19-3.8 2.19-3.79-2.19M0 7v2h7V7m4 3.11 4 2.31v4.69l-4-2.3m10-4.7v4.7l-4 2.3v-4.69M2 11v2h5v-2m-3 4v2h3v-2"/></svg></span> ChangeState<a class="headerlink" href="#changestate" title="Anchor link to this section for reference">&para;</a></h4>
 <p>Force set the entity's current state.
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nv">Entity</span><span class="p">:</span><span class="nf">ChangeState</span><span class="p">(</span><span class="nv">state</span><span class="p">:</span><span class="w"> </span><span class="py">Enum</span><span class="p">.</span><span class="py">EntityState</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">()</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nv">Entity</span><span class="p">:</span><span class="nf">ChangeState</span><span class="p">(</span><span class="nv">state</span><span class="p">:</span><span class="w"> </span><span class="py">Enum</span><span class="p">.</span><span class="py">EntityState</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">()</span>
 </span></code></pre></div>
 <strong>Parameters</strong></p>
 <div class="param-box">
@@ -2466,7 +2521,7 @@ This is a dynamic property. Meaning it will change overtime.</p>
 <hr />
 <h4 id="moveto"><span class="twemoji function"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 4 9 8.04v7.92L16 20l7-4.04V8.04m-7-1.73 3.8 2.19-3.8 2.19-3.79-2.19M0 7v2h7V7m4 3.11 4 2.31v4.69l-4-2.3m10-4.7v4.7l-4 2.3v-4.69M2 11v2h5v-2m-3 4v2h3v-2"/></svg></span> MoveTo<a class="headerlink" href="#moveto" title="Anchor link to this section for reference">&para;</a></h4>
 <p>Make the entity move to a location.
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nv">Entity</span><span class="p">:</span><span class="nf">MoveTo</span><span class="p">(</span><span class="nv">location</span><span class="p">:</span><span class="w"> </span><span class="py">Vector3</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">()</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nv">Entity</span><span class="p">:</span><span class="nf">MoveTo</span><span class="p">(</span><span class="nv">location</span><span class="p">:</span><span class="w"> </span><span class="py">Vector3</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">()</span>
 </span></code></pre></div>
 <strong>Parameters</strong></p>
 <div class="param-box">
@@ -2481,7 +2536,7 @@ This is a dynamic property. Meaning it will change overtime.</p>
 <hr />
 <h4 id="addtojanitor"><span class="twemoji function"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 4 9 8.04v7.92L16 20l7-4.04V8.04m-7-1.73 3.8 2.19-3.8 2.19-3.79-2.19M0 7v2h7V7m4 3.11 4 2.31v4.69l-4-2.3m10-4.7v4.7l-4 2.3v-4.69M2 11v2h5v-2m-3 4v2h3v-2"/></svg></span> AddToJanitor<a class="headerlink" href="#addtojanitor" title="Anchor link to this section for reference">&para;</a></h4>
 <p>Passes the given object to the entity's janitor to be destroyed/disconnected on entity destruction. If a function is passed, it will be called when the entity is destroyed.
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nv">Entity</span><span class="p">:</span><span class="nf">AddToJanitor</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span><span class="w"> </span><span class="py">T</span><span class="p">,</span><span class="nv">methodName</span><span class="err">?</span><span class="p">:</span><span class="w"> </span><span class="nv">boolean</span><span class="o">|</span><span class="nv">string</span><span class="p">,</span><span class="nv">index</span><span class="err">?</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nv">T</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nv">Entity</span><span class="p">:</span><span class="nf">AddToJanitor</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span><span class="w"> </span><span class="py">T</span><span class="p">,</span><span class="nv">methodName</span><span class="err">?</span><span class="p">:</span><span class="w"> </span><span class="nv">boolean</span><span class="o">|</span><span class="nv">string</span><span class="p">,</span><span class="nv">index</span><span class="err">?</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nv">T</span>
 </span></code></pre></div>
 <strong>Parameters</strong></p>
 <div class="param-box">
@@ -2519,7 +2574,7 @@ This is a dynamic property. Meaning it will change overtime.</p>
 <h4 id="movetoroom"><span class="twemoji function"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 4 9 8.04v7.92L16 20l7-4.04V8.04m-7-1.73 3.8 2.19-3.8 2.19-3.79-2.19M0 7v2h7V7m4 3.11 4 2.31v4.69l-4-2.3m10-4.7v4.7l-4 2.3v-4.69M2 11v2h5v-2m-3 4v2h3v-2"/></svg></span> MoveToRoom<a class="headerlink" href="#movetoroom" title="Anchor link to this section for reference">&para;</a></h4>
 <p>{yields}</p>
 <p>Make the entity move to a room number.
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nv">Entity</span><span class="p">:</span><span class="nf">MoveToRoom</span><span class="p">(</span><span class="nv">roomNum</span><span class="p">:</span><span class="w"> </span><span class="py">number</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">()</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nv">Entity</span><span class="p">:</span><span class="nf">MoveToRoom</span><span class="p">(</span><span class="nv">roomNum</span><span class="p">:</span><span class="w"> </span><span class="py">number</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">()</span>
 </span></code></pre></div>
 <strong>Parameters</strong></p>
 <div class="param-box">
@@ -2534,12 +2589,12 @@ This is a dynamic property. Meaning it will change overtime.</p>
 <hr />
 <h4 id="destroy"><span class="twemoji function"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 4 9 8.04v7.92L16 20l7-4.04V8.04m-7-1.73 3.8 2.19-3.8 2.19-3.79-2.19M0 7v2h7V7m4 3.11 4 2.31v4.69l-4-2.3m10-4.7v4.7l-4 2.3v-4.69M2 11v2h5v-2m-3 4v2h3v-2"/></svg></span> Destroy<a class="headerlink" href="#destroy" title="Anchor link to this section for reference">&para;</a></h4>
 <p>Destroys the entity and disconnects all connections.
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nv">Entity</span><span class="p">:</span><span class="nf">Destroy</span><span class="p">()</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">()</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nv">Entity</span><span class="p">:</span><span class="nf">Destroy</span><span class="p">()</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">()</span>
 </span></code></pre></div></p>
 <hr />
 <h4 id="setpos"><span class="twemoji function"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 4 9 8.04v7.92L16 20l7-4.04V8.04m-7-1.73 3.8 2.19-3.8 2.19-3.79-2.19M0 7v2h7V7m4 3.11 4 2.31v4.69l-4-2.3m10-4.7v4.7l-4 2.3v-4.69M2 11v2h5v-2m-3 4v2h3v-2"/></svg></span> SetPos<a class="headerlink" href="#setpos" title="Anchor link to this section for reference">&para;</a></h4>
 <p>Set the entity's model to a position and an optional position for the entity to look at.
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nv">Entity</span><span class="p">:</span><span class="nf">SetPos</span><span class="p">(</span><span class="nv">pos</span><span class="p">:</span><span class="w"> </span><span class="py">Vector3</span><span class="p">,</span><span class="w"> </span><span class="nv">lookAt</span><span class="p">:</span><span class="w"> </span><span class="py">Vector3</span><span class="err">?</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">()</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nv">Entity</span><span class="p">:</span><span class="nf">SetPos</span><span class="p">(</span><span class="nv">pos</span><span class="p">:</span><span class="w"> </span><span class="py">Vector3</span><span class="p">,</span><span class="w"> </span><span class="nv">lookAt</span><span class="p">:</span><span class="w"> </span><span class="py">Vector3</span><span class="err">?</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">()</span>
 </span></code></pre></div>
 <strong>Parameters</strong></p>
 <div class="param-box">
@@ -2561,7 +2616,7 @@ This is a dynamic property. Meaning it will change overtime.</p>
 <h4 id="setsetting"><span class="twemoji function"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 4 9 8.04v7.92L16 20l7-4.04V8.04m-7-1.73 3.8 2.19-3.8 2.19-3.79-2.19M0 7v2h7V7m4 3.11 4 2.31v4.69l-4-2.3m10-4.7v4.7l-4 2.3v-4.69M2 11v2h5v-2m-3 4v2h3v-2"/></svg></span> SetSetting<a class="headerlink" href="#setsetting" title="Anchor link to this section for reference">&para;</a></h4>
 <p>{recommended}</p>
 <p>Set a setting from the <code>EntityData</code> the entity is using to a different value. This is useful If you want to change a certain entity's setting during runtime.
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nv">Entity</span><span class="p">:</span><span class="nf">SetSetting</span><span class="p">(</span><span class="nv">setting</span><span class="p">:</span><span class="w"> </span><span class="py">string</span><span class="p">,</span><span class="nv">value</span><span class="p">:</span><span class="w"> </span><span class="py">any</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">()</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nv">Entity</span><span class="p">:</span><span class="nf">SetSetting</span><span class="p">(</span><span class="nv">setting</span><span class="p">:</span><span class="w"> </span><span class="py">string</span><span class="p">,</span><span class="nv">value</span><span class="p">:</span><span class="w"> </span><span class="py">any</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">()</span>
 </span></code></pre></div>
 <strong>Parameters</strong></p>
 <div class="param-box">
@@ -2583,7 +2638,7 @@ This is a dynamic property. Meaning it will change overtime.</p>
 <h4 id="start"><span class="twemoji function"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 4 9 8.04v7.92L16 20l7-4.04V8.04m-7-1.73 3.8 2.19-3.8 2.19-3.79-2.19M0 7v2h7V7m4 3.11 4 2.31v4.69l-4-2.3m10-4.7v4.7l-4 2.3v-4.69M2 11v2h5v-2m-3 4v2h3v-2"/></svg></span> Start<a class="headerlink" href="#start" title="Anchor link to this section for reference">&para;</a></h4>
 <p>{recommended}</p>
 <p>Start the entity.
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nv">Entity</span><span class="p">:</span><span class="nf">Start</span><span class="p">()</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">()</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nv">Entity</span><span class="p">:</span><span class="nf">Start</span><span class="p">()</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">()</span>
 </span></code></pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -2593,17 +2648,17 @@ This is a dynamic property. Meaning it will change overtime.</p>
 <h3 id="events_1">Events<a class="headerlink" href="#events_1" title="Anchor link to this section for reference">&para;</a></h3>
 <h4 id="onstart"><span class="twemoji event"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> OnStart<a class="headerlink" href="#onstart" title="Anchor link to this section for reference">&para;</a></h4>
 <p>Fires when the entity has started via <a href="#start"><code>:Start()</code></a>
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">OnStart</span><span class="w"> </span><span class="p">():</span><span class="w"> </span><span class="nv">Signal</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">OnStart</span><span class="w"> </span><span class="p">():</span><span class="w"> </span><span class="nv">Signal</span>
 </span></code></pre></div></p>
 <hr />
 <h4 id="onended"><span class="twemoji event"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> OnEnded<a class="headerlink" href="#onended" title="Anchor link to this section for reference">&para;</a></h4>
 <p>Fires when the entity has completed it's event sequence.
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">OnEnded</span><span class="w"> </span><span class="p">():</span><span class="w"> </span><span class="nv">Signal</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">OnEnded</span><span class="w"> </span><span class="p">():</span><span class="w"> </span><span class="nv">Signal</span>
 </span></code></pre></div></p>
 <hr />
 <h4 id="onhit"><span class="twemoji event"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> OnHit<a class="headerlink" href="#onhit" title="Anchor link to this section for reference">&para;</a></h4>
 <p>Fires when the entity <em>successfully</em> damages a player.
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">OnHit</span><span class="w"> </span><span class="p">(</span><span class="nv">player</span><span class="p">:</span><span class="w"> </span><span class="py">Player</span><span class="p">):</span><span class="w"> </span><span class="nv">Signal</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">OnHit</span><span class="w"> </span><span class="p">(</span><span class="nv">player</span><span class="p">:</span><span class="w"> </span><span class="py">Player</span><span class="p">):</span><span class="w"> </span><span class="nv">Signal</span>
 </span></code></pre></div>
 <strong>Parameters</strong></p>
 <div class="param-box">
@@ -2618,7 +2673,7 @@ This is a dynamic property. Meaning it will change overtime.</p>
 <hr />
 <h4 id="onkill"><span class="twemoji event"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> OnKill<a class="headerlink" href="#onkill" title="Anchor link to this section for reference">&para;</a></h4>
 <p>Fires when the entity <em>successfully</em> kills a player.
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">OnKill</span><span class="w"> </span><span class="p">(</span><span class="nv">player</span><span class="p">:</span><span class="w"> </span><span class="py">Player</span><span class="p">):</span><span class="w"> </span><span class="nv">Signal</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">OnKill</span><span class="w"> </span><span class="p">(</span><span class="nv">player</span><span class="p">:</span><span class="w"> </span><span class="py">Player</span><span class="p">):</span><span class="w"> </span><span class="nv">Signal</span>
 </span></code></pre></div>
 <strong>Parameters</strong></p>
 <div class="param-box">
@@ -2632,7 +2687,7 @@ This is a dynamic property. Meaning it will change overtime.</p>
 <hr />
 <h4 id="onroomreached"><span class="twemoji event"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> OnRoomReached<a class="headerlink" href="#onroomreached" title="Anchor link to this section for reference">&para;</a></h4>
 <p>Fires when the entity enters a room.
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">OnRoomReached</span><span class="w"> </span><span class="p">(</span><span class="nv">roomNum</span><span class="p">:</span><span class="w"> </span><span class="py">number</span><span class="p">):</span><span class="w"> </span><span class="nv">Signal</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">OnRoomReached</span><span class="w"> </span><span class="p">(</span><span class="nv">roomNum</span><span class="p">:</span><span class="w"> </span><span class="py">number</span><span class="p">):</span><span class="w"> </span><span class="nv">Signal</span>
 </span></code></pre></div>
 <strong>Parameters</strong></p>
 <div class="param-box">
@@ -2646,7 +2701,7 @@ This is a dynamic property. Meaning it will change overtime.</p>
 <hr />
 <h4 id="onupdate"><span class="twemoji event"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> OnUpdate<a class="headerlink" href="#onupdate" title="Anchor link to this section for reference">&para;</a></h4>
 <p>Equivalent to <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/RunService#PostSimulation"><code>RunSerivce.PostSimulation</code></a> but fires after all entity core actions are called.
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">OnUpdate</span><span class="w"> </span><span class="p">(</span><span class="nv">deltaTime</span><span class="p">:</span><span class="w"> </span><span class="py">number</span><span class="p">):</span><span class="w"> </span><span class="nv">Signal</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">OnUpdate</span><span class="w"> </span><span class="p">(</span><span class="nv">deltaTime</span><span class="p">:</span><span class="w"> </span><span class="py">number</span><span class="p">):</span><span class="w"> </span><span class="nv">Signal</span>
 </span></code></pre></div>
 <strong>Parameters</strong></p>
 <div class="param-box">
@@ -2660,7 +2715,7 @@ This is a dynamic property. Meaning it will change overtime.</p>
 <hr />
 <h4 id="onrebound"><span class="twemoji event"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> OnRebound<a class="headerlink" href="#onrebound" title="Anchor link to this section for reference">&para;</a></h4>
 <p>Fires whenever the entity rebounds (reached the last or starting room).
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">OnRebound</span><span class="w"> </span><span class="p">(</span><span class="nv">rebounds</span><span class="p">:</span><span class="w"> </span><span class="py">number</span><span class="p">):</span><span class="w"> </span><span class="nv">Signal</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">OnRebound</span><span class="w"> </span><span class="p">(</span><span class="nv">rebounds</span><span class="p">:</span><span class="w"> </span><span class="py">number</span><span class="p">):</span><span class="w"> </span><span class="nv">Signal</span>
 </span></code></pre></div>
 <strong>Parameters</strong></p>
 <div class="param-box">
@@ -2674,7 +2729,7 @@ This is a dynamic property. Meaning it will change overtime.</p>
 <hr />
 <h4 id="movetofinished"><span class="twemoji event"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> MoveToFinished<a class="headerlink" href="#movetofinished" title="Anchor link to this section for reference">&para;</a></h4>
 <p>Fires whenever the entity has finished it's <a href="#moveto"><code>MoveTo</code></a> action.
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">MoveToFinished</span><span class="w"> </span><span class="p">(</span><span class="nv">reached</span><span class="p">:</span><span class="w"> </span><span class="py">boolean</span><span class="p">):</span><span class="w"> </span><span class="nv">Signal</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">MoveToFinished</span><span class="w"> </span><span class="p">(</span><span class="nv">reached</span><span class="p">:</span><span class="w"> </span><span class="py">boolean</span><span class="p">):</span><span class="w"> </span><span class="nv">Signal</span>
 </span></code></pre></div>
 <strong>Parameters</strong></p>
 <div class="param-box">
@@ -2688,7 +2743,7 @@ This is a dynamic property. Meaning it will change overtime.</p>
 <hr />
 <h4 id="statechanged"><span class="twemoji event"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> StateChanged<a class="headerlink" href="#statechanged" title="Anchor link to this section for reference">&para;</a></h4>
 <p>Fires whenever the entity's state changes.
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">StateChanged</span><span class="w"> </span><span class="p">(</span><span class="nv">state</span><span class="p">:</span><span class="w"> </span><span class="py">Enum</span><span class="p">.</span><span class="py">EntityState</span><span class="p">):</span><span class="w"> </span><span class="nv">Signal</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">StateChanged</span><span class="w"> </span><span class="p">(</span><span class="nv">state</span><span class="p">:</span><span class="w"> </span><span class="py">Enum</span><span class="p">.</span><span class="py">EntityState</span><span class="p">):</span><span class="w"> </span><span class="nv">Signal</span>
 </span></code></pre></div>
 <strong>Parameters</strong></p>
 <div class="param-box">
@@ -2703,7 +2758,7 @@ This is a dynamic property. Meaning it will change overtime.</p>
 <h4 id="entityadded"><span class="twemoji event"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> EntityAdded<a class="headerlink" href="#entityadded" title="Anchor link to this section for reference">&para;</a></h4>
 <p>{static}</p>
 <p>Fires when an entity is added via the <a href="#constructor">constructor</a>.
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">EntityAdded</span><span class="w"> </span><span class="p">(</span><span class="nv">entity</span><span class="p">:</span><span class="w"> </span><span class="py">Entity</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nv">Signal</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">EntityAdded</span><span class="w"> </span><span class="p">(</span><span class="nv">entity</span><span class="p">:</span><span class="w"> </span><span class="py">Entity</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nv">Signal</span>
 </span></code></pre></div>
 <strong>Parameters</strong></p>
 <div class="param-box">
@@ -2719,7 +2774,7 @@ This is a dynamic property. Meaning it will change overtime.</p>
 <h4 id="entityremoved"><span class="twemoji event"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 15H6l7-14v8h5l-7 14z"/></svg></span> EntityRemoved<a class="headerlink" href="#entityremoved" title="Anchor link to this section for reference">&para;</a></h4>
 <p>{static}</p>
 <p>Fires when an entity is removed via the <a href="#destroy">:Destroy()</a> method.
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">EntityRemoved</span><span class="w"> </span><span class="p">(</span><span class="nv">entity</span><span class="p">:</span><span class="w"> </span><span class="py">Entity</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nv">Signal</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">EntityRemoved</span><span class="w"> </span><span class="p">(</span><span class="nv">entity</span><span class="p">:</span><span class="w"> </span><span class="py">Entity</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nv">Signal</span>
 </span></code></pre></div>
 <strong>Parameters</strong></p>
 <div class="param-box">
@@ -2735,9 +2790,9 @@ This is a dynamic property. Meaning it will change overtime.</p>
 <h3 id="callbacks_1">Callbacks<a class="headerlink" href="#callbacks_1" title="Anchor link to this section for reference">&para;</a></h3>
 <h4 id="onspawn"><span class="twemoji function"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 4 9 8.04v7.92L16 20l7-4.04V8.04m-7-1.73 3.8 2.19-3.8 2.19-3.79-2.19M0 7v2h7V7m4 3.11 4 2.31v4.69l-4-2.3m10-4.7v4.7l-4 2.3v-4.69M2 11v2h5v-2m-3 4v2h3v-2"/></svg></span> OnSpawn<a class="headerlink" href="#onspawn" title="Anchor link to this section for reference">&para;</a></h4>
 <p>Called when the entity is about to spawn in.
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">OnSpawn</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="w">  </span><span class="nv">entity</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Entity</span>
-</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">()</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">OnSpawn</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="w">  </span><span class="nv">entity</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Entity</span>
+</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">()</span>
 </span></code></pre></div>
 <strong>Parameters</strong></p>
 <div class="param-box">
@@ -2757,9 +2812,9 @@ This is a dynamic property. Meaning it will change overtime.</p>
 <hr />
 <h4 id="onfinished"><span class="twemoji function"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 4 9 8.04v7.92L16 20l7-4.04V8.04m-7-1.73 3.8 2.19-3.8 2.19-3.79-2.19M0 7v2h7V7m4 3.11 4 2.31v4.69l-4-2.3m10-4.7v4.7l-4 2.3v-4.69M2 11v2h5v-2m-3 4v2h3v-2"/></svg></span> OnFinished<a class="headerlink" href="#onfinished" title="Anchor link to this section for reference">&para;</a></h4>
 <p>Called when the entity is about to finish.
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">OnFinished</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="w">  </span><span class="nv">entity</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Entity</span>
-</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">()</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="nv">Entity</span><span class="p">.</span><span class="nf">OnFinished</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="w">  </span><span class="nv">entity</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Entity</span>
+</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">()</span>
 </span></code></pre></div>
 <strong>Parameters</strong></p>
 <div class="param-box">
