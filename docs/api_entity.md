@@ -57,6 +57,9 @@ The base class for every single entity.
     <div class="param-header icon-cube-send"><a href="#getposition">GetPosition</a> () : <a href="https://create.roblox.com/docs/en-us/reference/engine/datatypes/Vector3">Vector3</a></div>
   </div>
   <div class="param-row">
+    <div class="param-header icon-cube-send"><a href="#getspeed">GetSpeed</a> () : <a href="https://create.roblox.com/docs/en-us/luau/numbers">number</a></div>
+  </div>
+  <div class="param-row">
     <div class="param-header icon-cube-send"><a href="#gettarget">GetTarget</a> () : <a href="https://create.roblox.com/docs/en-us/reference/engine/datatypes/Vector3">Vector3</a>?</div>
   </div>  
   <div class="param-row">
@@ -127,7 +130,6 @@ The base class for every single entity.
     <div class="param-header icon-lightning"><a href="#entityremoved">EntityRemoved</a> (entity: <a href="#">Entity</a>) : <a href="https://create.roblox.com/docs/en-us/reference/engine/datatypes/RBXScriptSignal">Signal</a></div>
   </div>
 </div>
-
 
 ### Callbacks
 <div class="param-box">
@@ -238,6 +240,10 @@ The entity's speed data.
 Entity.Speed : number | SpeedData
 ```
 This property can be either a number or a special [`SpeedData`](./speed_data.md) dictionary.
+
+!!!danger
+    DO NOT USE THIS PROPERTY TO GET THE ENTITY'S SPEED! Use `Entity:GetSpeed()` instead.
+
 ---
 #### :material-cube-outline:{.property} State
 Determines the entity's current state.
@@ -267,6 +273,30 @@ This is a dynamic property. Meaning it will change overtime.
 ---
 
 ### Methods
+#### :material-cube-send:{.function} GetSpeed
+{recommended}
+
+Returns the entity's current speed.
+```lua
+Entity:GetSpeed() : Vector3
+```
+**Returns**
+<div class="param-box">
+  <div class="param-row">
+    <div class="param-header">
+      <a href="https://create.roblox.com/docs/en-us/luau/numbers">number</a>
+    </div>
+    <div class="param-desc">
+      The entity's current speed.
+    </div>
+  </div>
+</div>
+
+!!!note
+    It's important that you use this method to get the entity's speed. Since the introduction of `SpeedData` which gives the entity have more variations in terms of speed.
+
+---
+
 #### :material-cube-send:{.function} GetPosition
 Returns the entity's position in [Vector3]
 ```lua
