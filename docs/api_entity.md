@@ -69,6 +69,9 @@ The base class for every single entity.
       <div class="param-header icon-cube-send"><a href="#isplayerhiding">IsPlayerHiding</a> (player: <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/Player">Player</a>) : <a href="https://create.roblox.com/docs/en-us/luau/booleans">boolean</a></div>
   </div>
   <div class="param-row">
+      <div class="param-header icon-cube-send"><a href="#getplayerhidingspot">GetPlayerHidingSpot</a> (player: <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/Player">Player</a>) : <a href="https://create.roblox.com/docs/en-us/luau/strings">string</a></div>
+  </div>
+  <div class="param-row">
       <div class="param-header icon-cube-send"><a href="#changestate">ChangeState</a> (state: <a href="../enums/#entity-state">Enum.EntityState</a>) : ()</div>
   </div>
   <div class="param-row">
@@ -387,6 +390,34 @@ Entity:IsPlayerHiding(player: Player) : boolean
     If the player is hiding in one of the blacklisted spots. The method will return false.
 ---
 
+#### :material-cube-send:{.function} GetPlayerHidingSpot
+{static}
+
+Returns the player's current hiding spot as a `string`. If the player isn't hiding, returns `nil` instead.
+```lua
+Entity:GetPlayerHidingSpot(player: Player) : string?
+```
+**Parameters**
+<div class="param-box">
+  <div class="param-row">
+    <div class="param-header">
+      player : <a href="https://create.roblox.com/docs/en-us/reference/engine/classes/Player">Player</a>
+    </div>
+    <div class="param-desc">The target player to check.</div>
+  </div>
+</div>
+
+**Returns**
+<div class="param-box">
+  <div class="param-row">
+    <div class="param-header">
+      <a href="https://create.roblox.com/docs/en-us/luau/strings">string</a>?
+    </div>
+    <div class="param-desc">The hiding spot the player is current hiding in.</div>
+  </div>
+</div>
+
+---
 #### :material-cube-send:{.function} ChangeState
 
 Force set the entity's current state.

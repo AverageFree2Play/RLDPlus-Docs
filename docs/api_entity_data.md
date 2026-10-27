@@ -39,7 +39,7 @@ The settings dictionary for the Entity class.
     <div class="param-header icon-cube"> <a href="#CanDestroyObstructions">CanDestroyObstructions</a> : <a href="https://create.roblox.com/docs/en-us/luau/booleans">boolean</a></div>
   </div>
   <div class="param-row">
-    <div class="param-header icon-cube"> <a href="#prohibitedspots">ProhibitedSpots</a> : {<a href="../enums/#hiding-spots">Enum.HidingSpot</a>}</div>
+    <div class="param-header icon-cube"> <a href="#prohibitedspots">ProhibitedSpots</a> : {<a href="../enums/#hiding-spots">Enum.HidingSpots</a>}</div>
   </div>
   <div class="param-row">
     <div class="param-header icon-cube"> <a href="#damageperrate">DamagePerRate</a> : <a href="https://create.roblox.com/docs/en-us/luau/numbers">number</a></div>
@@ -54,10 +54,19 @@ The settings dictionary for the Entity class.
     <div class="param-header icon-cube"> <a href="#raycasting">Raycasting</a> : <a href="https://create.roblox.com/docs/en-us/luau/booleans">boolean</a></div>
   </div>
   <div class="param-row">
-    <div class="param-header icon-cube"> <a href="#jumpscare">Jumpscare</a> : <a href="https://create.roblox.com/docs/en-us/luau/strings">string</a></div>
+    <div class="param-header icon-cube"> <a href="#dodamageonspawn">DoDamageOnSpawn</a> : <a href="https://create.roblox.com/docs/en-us/luau/booleans">boolean</a></div>
+  </div>
+  <div class="param-row">
+    <div class="param-header icon-cube"> <a href="#ignorehiding">IgnoreHiding</a> : <a href="https://create.roblox.com/docs/en-us/luau/booleans">boolean</a></div>
   </div>
   <div class="param-row">
     <div class="param-header icon-cube"> <a href="#Screenshake">Screenshake</a> : {[<a href="https://create.roblox.com/docs/en-us/luau/strings">string</a>]: any}</div>
+  </div>
+  <div class="param-row">
+    <div class="param-header icon-cube"> <a href="#hidingspotdamagemultiplier">HidingSpotDamageMultiplier</a> : {[<a href="https://create.roblox.com/docs/en-us/luau/strings">string</a>]: <a href="https://create.roblox.com/docs/en-us/luau/numbers">number</a>}</div>
+  </div>
+  <div class="param-row">
+    <div class="param-header icon-cube"> <a href="#Screenshake">Screenshake</a> : {[<a href="../enums/#hiding-spots">Enum.HidingSpots</a>]: any}</div>
   </div>
 </div>
 
@@ -200,6 +209,32 @@ Determines whether or not the entity will check to see if it can see players fir
 EntityData.Raycasting : boolean
 ```
 [:fontawesome-solid-droplet:](#raycasting "Default value") = `true`
+
+---
+#### :material-cube-outline:{.property} DoDamageOnSpawn
+Determines whether or not the entity will be able to deal damage when spawning in instead of having to wait until the entity starts moving.
+```lua
+EntityData.DoDamageOnSpawn : boolean
+```
+[:fontawesome-solid-droplet:](#dodamageonspawn "Default value") = `false`
+
+---
+#### :material-cube-outline:{.property} IgnoreHiding
+Determines whether or not the entity can damage players regardless if they're hiding or not.
+```lua
+EntityData.IgnoreHiding : boolean
+```
+[:fontawesome-solid-droplet:](#ignoregiding "Default value") = `false`
+
+---
+#### :material-cube-outline:{.property} HidingSpotDamageMultiplier
+This property is only usable when [IgnoreHiding](#ignorehiding) is set to `true`.
+
+A list containg hiding spots and their respective number to determine how much damage to be multiplied when players are in a certain specific hiding spot.
+```lua
+EntityData.HidingSpotDamageMultiplier : {[Enum.HidingSpots]: number}
+```
+[:fontawesome-solid-droplet:](#hidingspotdamagemultiplier "Default value") = `nil`
 
 ---
 #### :material-cube-outline:{.property} Jumpscare
